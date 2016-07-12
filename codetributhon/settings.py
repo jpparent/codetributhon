@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'bootstrap3',
     'pages',
     'members',
+    'projects',
 ]
 
 MIDDLEWARE_CLASSES = [

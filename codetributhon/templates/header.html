@@ -19,13 +19,13 @@
                 <ul class="hidden-xs nav navbar-nav" id="main-nav">
                     <li><a href="{% url 'pages:home'%}">Home</a></li>
                     <li><a href="{% url 'pages:calendar'%}">Evenements</a></li>
-                    <li class="right-logo"><a href="{#   url 'projects:project_list'#}">Projets</a></li>
+                    <li class="right-logo"><a href="{%  url 'projects:project_list' %}">Projets</a></li>
                     <li><a href="{% url 'pages:contact'%}">FAQ</a></li>
                 </ul>
                 <ul class="hidden-lg hidden-md hidden-sm nav navbar-nav pull-left" id="main-nav-mobil">
                     <li><a href="{% url 'pages:home'%}">Home</a></li>
                     <li><a href="{% url 'pages:calendar'%}">Evenements</a></li>
-                    <li class="right-logo"><a href="{#   url 'projects:project_list'#}">Projets</a></li>
+                    <li class="right-logo"><a href="{% url 'projects:project_list' %}">Projets</a></li>
                     <li><a href="#">FAQ</a></li>
                 </ul>
             </div>
