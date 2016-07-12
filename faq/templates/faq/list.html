@@ -1,0 +1,59 @@
+{% extends "landing_base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block extrahead %}
+    <link href="{% static 'css/project.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block pagedesc %}
+    Foire aux questions de C0deTribuThon
+{% endblock %}
+{% block pagekey %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="body-general">
+            <div class="row">
+                <div class="page-header">
+                    <h2>FAQ</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                {% if faq.count %}
+                    {% if faq %}
+                        {% for faq in f %}
+                            <div>
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <h2>
+                                            {{f.question}}
+                                        </h2>
+                                        <hr>
+                                        <p>
+                                            {{f.response}}
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="alert alert-warning">
+                            Aucunes questions
+                        </div>
+                    {% endif %}
+                {% else %}
+                    <div class="alert alert-warning">
+                        Aucunes questions
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
