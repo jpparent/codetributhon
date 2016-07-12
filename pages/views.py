@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth import logout
 from django.shortcuts import redirect
 from django.contrib import messages
-# from projects.models import Contribution
+from projects.models import Contribution
 
 
 class Home(generic.TemplateView):
