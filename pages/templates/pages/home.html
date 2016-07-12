@@ -1,0 +1,196 @@
+{% extends "landing_base.html" %}
+<!-- Load internationalisation utils-->
+{% load i18n %}
+{% load staticfiles %}
+{% block title %}Accueil{% endblock %}
+{% block pagedesc %}
+    Page d'accueil pour C0deTribuThon
+{% endblock %}
+{% block pagekey %}
+    {{ block.super }}
+{% endblock %}
+
+{% block extrahead %}
+    <link href="{% static 'css/libs/txtProgress.css' %}" rel="stylesheet">
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block extrajs %}
+    <script type="text/javascript">
+
+    </script>
+
+    <script type="text/javascript" src="{% static 'js/libs/jquery.backstretch.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/libs/txtProgress.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+
+    <script src="{% static 'js/template/flexslider.js' %}"></script>
+    <script src="{% static 'js/template/carousel.js' %}"></script>
+    <script src="{% static 'js/template/jquery.cslider.js' %}"></script>
+    <script src="{% static 'js/template/slider.js' %}"></script>
+    <script defer="defer" src="{% static 'js/template/custom.js' %}"></script>
+
+    <script>
+        //var percent = {#   number_of_contribution #}
+        /*var percent = 45;
+        $(".textProgress").data("animated", false).textProgress(percent);
+        $(".nb-contribution").html(percent);*/
+
+    </script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="slider-wrapper">
+        <div id="da-slider" class="da-slider">
+            <div class="hidden-xs da-slide">
+                <h2>Twitter Bootstrap</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <a href="#" class="da-link">Read more</a>
+                <div class="da-img"><img src="{% static 'img/parallax-slider/twitter.png' %}" alt="image01" /></div>
+            </div>
+            <div class="hidden-xs da-slide">
+                <h2>Préparez-vous à contribuer</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <a href="#" class="da-link">Read more</a>
+                <div class="da-img"><img src="{% static 'img/parallax-slider/responsive.png' %}" alt="image02" /></div>
+            </div>
+            <div class="hidden-xs da-slide">
+                <h2>HTML5</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <a href="#" class="da-link">Read more</a>
+                <div class="da-img"><img src="{% static 'img/parallax-slider/html5.png' %}" alt="image03" /></div>
+            </div>
+            <div class="hidden-xs da-slide">
+                <h2>CSS3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <a href="#" class="da-link">Read more</a>
+                <div class="da-img"><img src="{% static 'img/parallax-slider/css3.png' %}" alt="image04" /></div>
+            </div>
+
+        </div>
+
+        <div class="hidden-sm hidden-md hidden-lg text-center text-mobil">
+            <p>Code<strong>Tribu</strong>Thon</p>
+        </div>
+
+    </div>
+
+    <!--start: Wrapper-->
+    <div id="wrapper">
+
+        <!--start: Container -->
+        <div class="container">
+            <section class="hero-unit">
+                <h2 class="text-center">Pourquoi participer au C0deTribuThon?</h2>
+                <br>
+                <p>
+                    Travailler et participer au C0deTribuThon Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                </p>
+
+
+            </section>
+            <hr>
+
+            <section id="contributions">
+                <div class="row">
+                    <div id="progress-bar" class="hidden-xs hidden-sm">
+                        <div class="textProgress">
+                            <span class="tp">CODETRIBUTHON <i class="fa fa-linux"></i></span>
+                            <span class="tp">CODETRIBUTHON <i class="fa fa-linux"></i></span>
+                            <div class="progress"><span class="percent">20%</span></div>
+                        </div>
+                    </div>
+                    <div class="hidden-md hidden-lg text-center ">
+                        <h4>Nous avons déjà <em class="text-danger nb-contribution"></em> contributions</h4>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="text-center">
+                        <a href="{#   url 'projects:contribution_create'#}" class="btn btn-success btn-lg">Envoyer votre contribution</a>
+                    </div>
+                </div>
+
+            </section>
+            <hr>
+
+            <!-- start: Row -->
+            <div class="row">
+                     <h1 class="text-center">C'est quoi C0deTribuThon?</h1>
+                <br>
+                <div class="col-md-4">
+                    <div class="icons-box">
+                        <img src="{% static 'img/linux.png' %}" alt="logo linux">
+                        <div class="title"><h3>Easy to use</h3></div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="icons-box">
+                        <img src="{% static 'img/ubuntu.png' %}" alt="logo linux">
+                        <div class="title"><h3>Responsive</h3></div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="icons-box">
+                        <img src="{% static 'img/ff.png' %}" alt="logo linux">
+                        <div class="title"><h3>User friendly</h3></div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end: Row -->
+
+            <hr>
+
+            <!-- start: Row -->
+            <div class="row" id="bloc-partners">
+                <h1 class="text-center">Nos partenaires</h1>
+                <h3 class="text-center">Edition 2016</h3>
+                <br><br>
+                <div class="col-md-12">
+                    <div class="col-md-3">
+                        <div class="bloc-img-partner"><img src="{% static 'img/partners/ff.png' %}" alt="mozilla" width="65%"></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="bloc-img-partner"><img src="{% static 'img/partners/google.png' %}" alt="google" class="img-responsive" ></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="bloc-img-partner"><img src="{% static 'img/partners/redhat.png' %}" alt="redhat" class="img-responsive" ></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="bloc-img-partner"><img src="{% static 'img/partners/sflinux.png' %}" alt="savoir faire linux" class="img-responsive"></div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- end: Row -->
+
+        </div>
+        <!--end: Container-->
+
+    </div>
+    <!-- end: Wrapper  -->
+
+
+
+
+{% endblock %}
