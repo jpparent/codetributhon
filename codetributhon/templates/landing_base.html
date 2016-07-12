@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load bootstrap3 %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}Plateforme de contribution{% endblock %}
+        </title>
+        <meta name="description" content="{% block pagedesc %}{% endblock %}"/>
+        <meta name="keywords" content="{% block pagekey %}
+        C0deTribuThon, c0detributhon, codetributhon
+        {% endblock %}" />
+        <!-- end: Meta -->
+
+        <!-- start: Mobile Specific -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- end: Mobile Specific -->
+
+        <!-- start: Facebook Open Graph -->
+        <meta property="og:title" content="{% block fbpagetitle %}{% endblock %}"/>
+        <meta property="og:description" content="{% block fbpagedesc %}{% endblock %}"/>
+        <meta property="og:type" content="{% block fbpagetype %}{% endblock %}"/>
+        <meta property="og:url" content="{% block fbpageurl %}{% endblock %}"/>
+        <meta property="og:image" content="{% block fbpageimg %}{% endblock %}"/>
+        <!-- end: Facebook Open Graph -->
+
+        {# Load CSS and JavaScript #}
+        {% bootstrap_css %}
+
+
+
+        <link href="{% static 'font-awesome-4.5.0/css/font-awesome.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
+
+        {% block extrahead %}{% endblock %}
+    </head>
+
+    <body class="centered-logo">
+        {% include 'header.html' %}
+
+        <div class="body">
+            <div class="row">
+                <div class="col-sm-12">
+                    {% if messages %}
+                        {% for message in messages %}
+                            {% if message.tags == 'error' %}
+                                <div class="alert alert-danger alert-dismissible" style="margin-top: 10px;">
+                            {% elif message.tags == 'success'%}
+                                <div class="alert alert-success alert-dismissible" style="margin-top: 10px;">
+                            {% elif message.tags == 'info'%}
+                                <div class="alert alert-info alert-dismissible" style="margin-top: 10px;">
+                            {% elif message.tags == 'warning'%}
+                                <div class="alert alert-warning alert-dismissible" style="margin-top: 10px;">
+                            {% else %}
+                                <div class="alert alert-info alert-dismissible" style="margin-top: 10px;">
+                            {% endif %}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            {{ message }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    </div>
+                    </div>
+                    {% block content %}{% endblock %}
+        </div>
+
+
+        {% include 'footer.html' %}
+
+        <script src="{% static 'js/libs/jquery-2.2.2.min.js' %}" type="application/javascript"></script>
+
+        {% bootstrap_javascript %}
+        <!-- WARNING :  Do not move this line before a manual import of script! -->
+        {% block extrajs %}{% endblock %}
+    </body>
+</html>
