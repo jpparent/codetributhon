@@ -15,6 +15,6 @@ class FaqList(generic.ListView):
         return super(FaqList, self).dispatch(*args, **kwargs)
 
     def get_queryset(self):
-        list_faq = Faq.object.all().order_by('-create_date')
+        list_faq = Faq.objects.all().order_by('-create_date')
 
         return list_faq

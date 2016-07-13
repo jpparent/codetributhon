@@ -5,8 +5,7 @@ urlpatterns = patterns(
     '',
     url(
         r'^list/$',
-        views.FaqList,
+        views.FaqList.as_view(),
         name='faq_list'
     ),
-
 )
