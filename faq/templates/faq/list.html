@@ -26,8 +26,8 @@
 
             <div class="row">
                 {% if faq.count %}
-                    {% if faq %}
-                        {% for faq in f %}
+
+                        {% for f in faq %}
                             <div>
                                 <div class="thumbnail">
                                     <div class="caption">
@@ -43,11 +43,6 @@
                                 </div>
                             </div>
                         {% endfor %}
-                    {% else %}
-                        <div class="alert alert-warning">
-                            Aucunes questions
-                        </div>
-                    {% endif %}
                 {% else %}
                     <div class="alert alert-warning">
                         Aucunes questions
