@@ -15,6 +15,10 @@
     {{ block.super }}
 {% endblock %}
 
+{% block extrajs %}
+    <script defer="defer" src="{% static 'js/faq.js' %}"></script>
+{% endblock %}
+
 {% block content %}
     <div class="container">
         <div class="body-general">
@@ -25,29 +29,33 @@
             </div>
 
             <div class="row">
-                {% if faq.count %}
+                <div class="panel-group" id="accordion">
+                    {% if faq.count %}
 
-                        {% for f in faq %}
-                            <div>
-                                <div class="thumbnail">
-                                    <div class="caption">
-                                        <h2>
-                                            {{f.question}}
+                            {% for f in faq %}
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h2 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                {{f.question}}
+                                            </a>
                                         </h2>
-                                        <hr>
-                                        <p>
-                                            {{f.response}}
-                                        </p>
 
                                     </div>
+                                    <div class="panel-collapse collapse in" id="collapseOne">
+                                        <div class="panel-body">
+                                             <p>{{f.response}} </p>
+                                        </div>
+                                    </div>
+
                                 </div>
-                            </div>
-                        {% endfor %}
-                {% else %}
-                    <div class="alert alert-warning">
-                        Aucunes questions
-                    </div>
-                {% endif %}
+                            {% endfor %}
+                    {% else %}
+                        <div class="alert alert-warning">
+                            Aucunes questions
+                        </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
