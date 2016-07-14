@@ -68,7 +68,7 @@ class Project(Timestampable, models.Model):
             related_name='projects'
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
