@@ -1,6 +1,28 @@
 {% load staticfiles %}
 
     <div id="footer-menu" class="hidden-tablet hidden-phone">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">
+                    <div id="footer-menu-logo">
+						<a href="#"><img src="{% static 'img/mini-logo.png' %}" alt="logo" width="60%"/></a>
+					</div>
+                </div>
+                <div class="col-md-11">
+                    <div id="footer-menu-links">
+                        <ul class="list-inline" id="footer-nav">
+                            <li><a href="{% url 'pages:home'%}">Accueil</a></li>
+                            <li><a href="{% url 'pages:calendar'%}">Évènements</a></li>
+                            <li><a href="{%  url 'projects:project_list' %}">Projets</a></li>
+                            <li><a href="{% url 'faq:faq_list' %}">FAQ</a></li>
+                            <li><a href="{% url 'pages:settlement'%}">Règlement</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
     <div id="footer">
 
@@ -8,16 +30,14 @@
             <div class="row">
                 <div class="col-lg-4">
 
-                    <h3>Liens rapides </h3>
-                    <ul>
-                        <li><a href="{% url 'pages:home'%}">Accueil</a></li>
-                        <li><a href="{% url 'pages:calendar'%}">Évènements</a></li>
-                        <li><a href="{%  url 'projects:project_list' %}">Projets</a></li>
-                        <li><a href="{% url 'faq:faq_list' %}">FAQ</a></li>
-                        <li><a href="{% url 'pages:contact'%}">A propos</a></li>
-                        <li><a href="{% url 'pages:settlement'%}">Règlement</a></li>
-                    </ul>
+                    <h3>À propos</h3>
 
+                    <p class="text-justify">
+                        Le c0deTribuTh0n est une initiative propulsé par la ML2. L’objectif de la ML2 est de
+                        perfectionner les compétences des étudiants du réseau universitaire québécois, dans divers
+                        langages informatiques, par la participation à des projets libres. Notre mission: Initier,
+                        Développer, Partager
+                    </p>
 
                 </div>
 
