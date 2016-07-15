@@ -42,31 +42,35 @@
         {% include 'header.html' %}
 
         <div class="body">
-            <div class="row">
-                <div class="col-sm-12">
-                    {% if messages %}
-                        {% for message in messages %}
-                            {% if message.tags == 'error' %}
-                                <div class="alert alert-danger alert-dismissible" style="margin-top: 10px;">
-                            {% elif message.tags == 'success'%}
-                                <div class="alert alert-success alert-dismissible" style="margin-top: 10px;">
-                            {% elif message.tags == 'info'%}
-                                <div class="alert alert-info alert-dismissible" style="margin-top: 10px;">
-                            {% elif message.tags == 'warning'%}
-                                <div class="alert alert-warning alert-dismissible" style="margin-top: 10px;">
-                            {% else %}
-                                <div class="alert alert-info alert-dismissible" style="margin-top: 10px;">
-                            {% endif %}
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            {{ message }}
-                        {% endfor %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10">
+                        {% if messages %}
+                            {% for message in messages %}
+                                {% if message.tags == 'error' %}
+                                    <div class="alert alert-danger alert-dismissible system-message" style="margin-top: 10px;">
+                                {% elif message.tags == 'success'%}
+                                    <div class="alert alert-success alert-dismissible system-message" style="margin-top: 10px;">
+                                {% elif message.tags == 'info'%}
+                                    <div class="alert alert-info alert-dismissible system-message" style="margin-top: 10px;">
+                                {% elif message.tags == 'warning'%}
+                                    <div class="alert alert-warning alert-dismissible system-message" style="margin-top: 10px;">
+                                {% else %}
+                                    <div class="alert alert-info alert-dismissible system-message" style="margin-top: 10px;">
+                                {% endif %}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                {{ message }}
+                            {% endfor %}
+                            </div>
+                        {% endif %}
                     </div>
-                    {% endif %}
-                    </div>
-                    </div>
-                    {% block content %}{% endblock %}
+                </div>
+            </div>
+
+
+            {% block content %}{% endblock %}
         </div>
 
 
