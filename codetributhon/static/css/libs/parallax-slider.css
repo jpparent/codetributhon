@@ -1,15 +1,6 @@
 
 
-@font-face {
-    font-family: 'BebasNeueRegular';
-    src: url('../fonts/BebasNeue-webfont.eot');
-    src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/BebasNeue-webfont.woff') format('woff'),
-         url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
-         url('../fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 .da-slider h2{
 	font-family: "Boogaloo" !important;
@@ -42,18 +33,12 @@
 	text-align: left;
 	margin-left: -480px;
 
-
 }
 
 .da-slide-current{
 	z-index: 10;
 }
-.da-slider-fb .da-slide{
-	left: 100%;
-}
-.da-slider-fb  .da-slide.da-slide-current{
-	left: 0px;
-}
+
 .da-slide h2,
 .da-slide p,
 .da-slide .da-img{
@@ -61,15 +46,7 @@
 	opacity: 0;
 	left: 110%;
 }
-.da-slider-fb .da-slide h2,
-.da-slider-fb .da-slide p{
-	left: 10%;
-	opacity: 1;
-}
-.da-slider-fb .da-slide .da-img{
-	left: 50%;
-	opacity: 1;
-}
+
 .da-slide h2{
 	color: #fff;
 	font-size: 66px;
@@ -91,13 +68,13 @@
 	font-style: italic;
 	font-family: 'Economica', Arial, sans-serif;
 	font-weight: 400;
-
-    border-radius: 20px;
-	box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
     padding: 5px;
+	/*
+	border-radius: 20px;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 	border: 8px solid rgba(95,0,0,0.5);
-	background: rgba(95,0,0,0.2);
+	background: rgba(95,0,0,0.2);*/
 }
 .da-slide .da-img{
 	text-align: center;
@@ -108,46 +85,6 @@
 	left: 110%; /*60%*/
 }
 
-.da-dots{
-	width: 100%;
-	position: absolute;
-	text-align: center;
-	left: 0px;
-	bottom: 20px;
-	z-index: 2000;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-}
-.da-dots span{
-	display: inline-block;
-	position: relative;
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	background: #c72323;
-	margin: 3px;
-	cursor: pointer;
-	box-shadow: 
-		1px 1px 1px rgba(0,0,0,0.1) inset, 
-		1px 1px 1px rgba(255,255,255,0.1);
-}
-.da-dots span.da-dots-current:after{
-	content: '';
-	width: 8px;
-	height: 8px;
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	border-radius: 50%;
-	background: rgb(255,255,255);
-	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1)));
-	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
-	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
-	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
-	background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
-}
 .da-arrows{
 	-moz-user-select: none;
 	-webkit-user-select: none;
@@ -701,32 +638,32 @@
 ====================================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 
-	
+
 	.da-slide {
 		width: 750px;
 		height: 100%;
 		left: 50%;
 		margin-left: -375px;
 	}
-	
+
 	.da-slide h2{
 		font-size: 56px;
 		width: 50%;
-	}	
+	}
 }
 
 /* All Mobile Sizes (devices and browser)
 ====================================================================== */
 @media only screen and (max-width: 767px) {
 
-	
+
 	.da-slide {
 		width: 420px;
 		height: 100%;
 		left: 50%;
 		margin-left: -210px;
 	}
-	
+
 	.da-slide h2{
 		font-size: 36px;
 		width: 50%;
@@ -737,25 +674,25 @@
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers)
 ====================================================================== */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-	
+
 	.da-slider{
 		width: 100% !important;
 		height: 300px;
 	}
-	
+
 	.da-slide {
 		width: 420px;
 		height: 100%;
 		left: 50%;
 		margin-left: -210px;
 	}
-	
+
 	.da-slide h2{
 		font-size: 36px;
 		width: 60%;
 		top: 20px;
 	}
-	
+
 	.da-slide p{
 		width: 80%;
 		top: 90px;
@@ -787,20 +724,20 @@
 		width: 100% !important;
 		height: 300px;
 	}
-	
+
 	.da-slide {
 		width: 300px;
 		height: 100%;
 		left: 50%;
 		margin-left: -150px;
 	}
-	
+
 	.da-slide h2{
 		font-size: 36px;
 		width: 60%;
 		top: 20px;
 	}
-	
+
 	.da-slide p{
 		width: 80%;
 		top: 90px;
@@ -820,5 +757,5 @@
 		-moz-user-select: none;
 		-webkit-user-select: none;
 	}
-	
+
 }

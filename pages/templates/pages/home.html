@@ -16,19 +16,9 @@
 {% endblock %}
 
 {% block extrajs %}
-    <script type="text/javascript">
-
-    </script>
-
     <script type="text/javascript" src="{% static 'js/libs/jquery.backstretch.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/libs/txtProgress.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
-
-    <script src="{% static 'js/template/flexslider.js' %}"></script>
-    <script src="{% static 'js/template/carousel.js' %}"></script>
-    <script src="{% static 'js/template/jquery.cslider.js' %}"></script>
-    <script src="{% static 'js/template/slider.js' %}"></script>
-    <script defer="defer" src="{% static 'js/template/custom.js' %}"></script>
 
     <script>
         var percent = {{ number_of_contribution }}
@@ -40,61 +30,72 @@
 
 {% block content %}
 
-    <div class="slider-wrapper">
-        <div id="da-slider" class="da-slider">
-            <div class="hidden-xs da-slide">
-                <h2>Un, deux, trois GO!</h2>
-                <p>
-                    C’est enfin parti pour le c0deTribuTh0n 2016! Du 15 septembre au 2 décembre 2016 participez à nos
-                    activités! Plusieurs prix à gagner.
-                </p>
+    <div id="slider-wrapper">
 
-                <div class="da-img"><img src="{% static 'img/parallax-slider/img_slide_1.png' %}" alt="image01" /></div>
+        <div id="home-caroussel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#home-caroussel" data-slide-to="0" class="active"></li>
+                <li data-target="#home-caroussel" data-slide-to="1"></li>
+                <li data-target="#home-caroussel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="box-text">
+                        <h2>Un, deux, trois GO!</h2>
+                        <p>
+                            C’est enfin parti pour le c0deTribuTh0n 2016! Du 15 septembre au 2 décembre 2016 participez à nos
+                            activités! Plusieurs prix à gagner.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="box-text">
+                        <h2>Préparez-vous à contribuer</h2>
+                        <p>
+                            Le but est d’atteindre 100 contributions dans trois  projets de logiciel  libre. Nos partenaires
+                            Google, Red Hat et Savoir-faire Linux donnerons des ateliers spécifiques au projet.
+                        </p>
+                        <a href="{%  url 'projects:project_list' %}" class="btn btn-danger">Projets</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="box-text">
+                        <h2>Joins-toi à nous!</h2>
+                        <p>
+                            Pour participer, rien de plus simple. Inscris-toi aux ateliers, contribue, envoie-nous URL
+                            de ton commit. Les meilleurs contributeurs étudiants pourront gagner des prix.
+                        </p>
+                        <a href="" class="btn btn-danger">Insrivez-vous</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="box-text">
+                        <h2>Participez au coup d’envoi chez Google Montréal!</h2>
+                        <p>
+                            Venez célébrer le grand départ du c0deTribuTh0n 2016 chez Google Montréal de 8 h à
+                            20 h le jeudi 15 septembre.
+                        </p>
+                        <a href="" class="btn btn-danger">Insrivez-vous</a>
+                    </div>
+                </div>
             </div>
-            <div class="hidden-xs da-slide">
-                <h2>Préparez-vous à contribuer</h2>
-                <p>
-                    Le but est d’atteindre 100 contributions dans trois  projets de logiciel  libre. Nos partenaires
-                    Google, Red Hat et Savoir-faire Linux donnerons des ateliers spécifiques au projet.
-                    <br>
-                    <a href="{%  url 'projects:project_list' %}" class="btn btn-danger btn-sm">Projets</a>
-                </p>
-
-                <div class="da-img"><img src="{% static 'img/parallax-slider/img_slide_2.png' %}" alt="image02" /></div>
-            </div>
-            <div class="hidden-xs da-slide">
-                <h2>Joins-toi à nous!</h2>
-                <p>
-                    Pour participer, rien de plus simple. Inscris-toi aux ateliers, contribue, envoie-nous URL
-                    de ton commit. Les meilleurs contributeurs étudiants pourront gagner des prix.
-                    <br>
-                    <a href="" class="btn btn-danger btn-sm">Insrivez-vous</a>
-                </p>
-
-                <div class="da-img"><img src="{% static 'img/parallax-slider/img_slide_3.png' %}" alt="image03" /></div>
-            </div>
-            <div class="hidden-xs da-slide">
-                <h2>Participez au coup d’envoi chez Google Montréal!</h2>
-                <p>
-                    Venez célébrer le grand départ du c0deTribuTh0n 2016 chez Google Montréal de 8 h à
-                    20 h le jeudi 15 septembre.
-                    <br>
-                    <a href="" class="btn btn-danger btn-sm">Insrivez-vous</a>
-                </p>
-
-                <div class="da-img"><img src="{% static 'img/parallax-slider/img_slide_4.png' %}" alt="image04" /></div>
-            </div>
-
-            <nav class="da-arrows">
-				<span class="da-arrows-prev"></span>
-				<span class="da-arrows-next"></span>
-			</nav>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#home-caroussel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#home-caroussel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
 
         </div>
 
         <div class="hidden-sm hidden-md hidden-lg text-center text-mobil">
             <p>Code<strong>Tribu</strong>Thon</p>
         </div>
+
 
     </div>
 
