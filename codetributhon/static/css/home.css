@@ -73,9 +73,12 @@
 
 /* slide
 =================================================================== */
+#slider-wrapper {
+  height: 900px; }
+
 #home-caroussel {
   width: 100%;
-  height: 900px; }
+  height: inherit; }
   #home-caroussel .carousel-inner {
     top: 42%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -105,22 +108,31 @@
   background: #fff;
   padding-top: 20px; }
 
-.text-mobil p {
-  font-family: ralewayThin;
-  font-size: 3.5em; }
-  .text-mobil p strong {
-    font-family: ralewayBold; }
+.text-mobil {
+  position: absolute;
+  bottom: 195px;
+  color: white !important;
+  font-weight: bolder;
+  left: 27px;
+  top: 40%;
+  display: inline-block;
+  font-size: 0.8em; }
+  .text-mobil p {
+    font-family: ralewayThin;
+    font-size: 3.5em; }
+    .text-mobil p strong {
+      font-family: ralewayBold; }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers)
 ====================================================================== */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .slider-wrapper {
+  #slider-wrapper {
     width: 100% !important;
     height: 300px; } }
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
 =================================================================== */
 @media only screen and (max-width: 479px) {
-  .slider-wrapper {
+  #slider-wrapper {
     width: 100% !important;
     height: 300px; } }
 /* Icon Boxes
