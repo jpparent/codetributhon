@@ -29,27 +29,27 @@
             </div>
 
             <div class="row">
-                <div class="panel-group" id="accordion">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
                     {% if faq.count %}
 
-                            {% for f in faq %}
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h2 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                                {{f.question}}
-                                            </a>
-                                        </h2>
-
-                                    </div>
-                                    <div class="panel-collapse collapse in" id="collapseOne">
-                                        <div class="panel-body">
-                                             <p>{{f.response}} </p>
-                                        </div>
-                                    </div>
-
+                        {% for f in faq %}
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading{{ f.id }}">
+                                    <a class="panel-title" data-toggle="collapse" data-parent="#accordion"
+                                       href="#collapse{{ f.id }}" aria-expanded="true" aria-controls="collapse{{ f.id }}">
+                                        {{f.question}}
+                                    </a>
                                 </div>
-                            {% endfor %}
+                                <div id="collapse{{ f.id }}" class="panel-collapse collapse in" role="tabpanel"
+                                     aria-labelledby="heading{{ f.id }}">
+                                    <div class="panel-body">
+                                         <p>{{f.response}} </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        {% endfor %}
                     {% else %}
                         <div class="alert alert-warning">
                             Aucunes questions
