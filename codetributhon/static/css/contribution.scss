@@ -4,12 +4,8 @@
 }
 
 /* formulaire d'envoie de contribution */
-label{
-  color: white ;
-}
-#contrib-form{
+.contrib-form{
     background-color: rgba(0, 0, 0, 0.5);
-
 
     .form-top{
         background-color: rgba(0, 0, 0, 0.2);
@@ -17,7 +13,7 @@ label{
         color: white;
         margin-bottom: 10px;
 
-        h3{
+        h2{
           color: white !important;
         }
         .form-top-left{
@@ -32,6 +28,7 @@ label{
     }
     .form-bottom{
         padding: 10px;
+        color: white ;
     }
 }
 

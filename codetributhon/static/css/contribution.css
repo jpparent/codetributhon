@@ -3,27 +3,25 @@
   height: 1000px; }
 
 /* formulaire d'envoie de contribution */
-label {
-  color: white; }
-
-#contrib-form {
+.contrib-form {
   background-color: rgba(0, 0, 0, 0.5); }
-  #contrib-form .form-top {
+  .contrib-form .form-top {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 10px;
     color: white;
     margin-bottom: 10px; }
-    #contrib-form .form-top h3 {
+    .contrib-form .form-top h2 {
       color: white !important; }
-    #contrib-form .form-top .form-top-left {
+    .contrib-form .form-top .form-top-left {
       float: right;
       padding-top: 10px; }
-    #contrib-form .form-top .form-top-right {
+    .contrib-form .form-top .form-top-right {
       display: inline-block;
       font-size: 50px;
       padding-left: 5px; }
-  #contrib-form .form-bottom {
-    padding: 10px; }
+  .contrib-form .form-bottom {
+    padding: 10px;
+    color: white; }
 
 @media (max-width: 415px) {
   .form-top-left {
