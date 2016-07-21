@@ -1,12 +1,10 @@
 {% extends "landing_base.html" %}
 
-{% block title %}Détail du projet{% endblock %}
-{% block pagedesc %}
-    Page de detail pour les projets pour C0deTribuThon
-{% endblock %}
-{% block pagekey %}
-    {{ block.super }}
-{% endblock %}
+{% block title %}{{ block.super }}- projet - {{project.name}}{% endblock %}
+
+{% block pagedesc %}{{ block.super }}détail du projet {{project.name}}{% endblock %}
+
+{% block pagekey %}{{ block.super }}, projet, projets, project, projects, {{project.name}}, detail {{project.name}}{% endblock %}
 
 {% block content %}
     <div class="container">

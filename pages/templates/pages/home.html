@@ -2,13 +2,14 @@
 <!-- Load internationalisation utils-->
 {% load i18n %}
 {% load staticfiles %}
-{% block title %}Accueil{% endblock %}
-{% block pagedesc %}
-    Page d'accueil pour C0deTribuThon
-{% endblock %}
-{% block pagekey %}
-    {{ block.super }}
-{% endblock %}
+
+{% block title %}{{ block.super }}Officiel - Accueil{% endblock %}
+
+{% block pagedesc %}{{ block.super }}Page d'accueil{% endblock %}
+
+{% block pagekey %}{{ block.super }}, home, accueil, facebook, twitter, marathon, activité communautaire, mozilla,
+    Google, redhat, linux, savoir faire linux, savoir faire, etudiant, etudiants, étudiant, étudiants,
+    students, student{% endblock %}
 
 {% block extrahead %}
     <link href="{% static 'css/libs/txtProgress.css' %}" rel="stylesheet">

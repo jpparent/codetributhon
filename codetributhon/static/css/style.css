@@ -119,6 +119,9 @@ a {
 #main-nav .right-logo {
   margin-left: 20%; }
 
+#main-nav-mobil li a, #logo-mobil {
+  color: white; }
+
 /* Boody
 ===================================================================== */
 .body-general {

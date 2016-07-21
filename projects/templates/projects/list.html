@@ -2,17 +2,14 @@
 {% load i18n %}
 {% load staticfiles %}
 
-{% block title %}Liste des projets{% endblock %}
+{% block title %}{{ block.super }}- projets{% endblock %}
+
+{% block pagedesc %}{{ block.super }}liste des projets{% endblock %}
+
+{% block pagekey %}{{ block.super }}, projet, projets, project, projects{% endblock %}
 
 {% block extrahead %}
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
-{% endblock %}
-
-{% block pagedesc %}
-    Page pour la liste des projets pour C0deTribuThon
-{% endblock %}
-{% block pagekey %}
-    {{ block.super }}
 {% endblock %}
 
 {% block content %}
