@@ -19,7 +19,7 @@ class Organization(Timestampable, models.Model):
     )
 
     logo = models.ImageField(
-            upload_to="avatars_org",
+            upload_to="media/avatars_org",
             verbose_name='Logo',
             blank=True
     )
@@ -57,7 +57,7 @@ class Project(Timestampable, models.Model):
     )
 
     logo = models.ImageField(
-            upload_to="avatars_projects",
+            upload_to="media/avatars_projects",
             verbose_name='Logo',
             blank=True
     )

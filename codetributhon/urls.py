@@ -16,11 +16,20 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('pages.urls', namespace="pages")),
-    url(r'^members/', include('members.urls', namespace="members")),
-    url(r'^projects/', include('projects.urls', namespace="projects")),
-    url(r'^faq/', include('faq.urls', namespace="faq")),
-]
+url_debug = None
+if (settings.DEBUG):
+    url_debug = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns = [
+        url(r'^admin/', admin.site.urls),
+        url(r'^', include('pages.urls', namespace="pages")),
+        url(r'^members/', include('members.urls', namespace="members")),
+        url(r'^projects/', include('projects.urls', namespace="projects")),
+        url(r'^faq/', include('faq.urls', namespace="faq")),
+        # url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_URL}),
+    ]+ url_debug
+

@@ -18,7 +18,7 @@ class ProjectList(generic.ListView):
         return super(ProjectList, self).dispatch(*args, **kwargs)
 
     def get_queryset(self):
-        list_project = Project.objects.order_by('-create_date')
+        list_project = Project.objects.filter(enabled=True).order_by('-create_date')
 
         return list_project
 
