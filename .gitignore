@@ -4,6 +4,8 @@
 db.*
 # file media
 media/*
+# static files
+*.css.map
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
