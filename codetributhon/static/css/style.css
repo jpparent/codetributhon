@@ -125,7 +125,8 @@ a {
 /* Boody
 ===================================================================== */
 .body-general {
-  margin-top: 10%; }
+  margin-top: 10%;
+  margin-bottom: 10%; }
 
 .system-message {
   margin-top: 60px !important; }

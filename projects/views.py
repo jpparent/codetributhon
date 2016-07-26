@@ -20,7 +20,6 @@ class ProjectList(generic.ListView):
 
     def get_queryset(self):
         # cursor = connection.cursor()
-
         list_project_tmp = Project.objects.filter(organization__enabled=True, enabled=True).order_by('-create_date')
         list_project = []
 
@@ -57,6 +56,8 @@ class ProjectDetail(generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(ProjectDetail, self).get_context_data(**kwargs)
+
+        self.object.nb_contrib = Contribution.objects.filter(project_id=self.object.id).count()
         md = markdown.Markdown()
         context['content_html'] = md.convert(self.object.description)
         return context

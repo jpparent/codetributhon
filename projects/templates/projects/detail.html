@@ -1,4 +1,6 @@
 {% extends "landing_base.html" %}
+{% load i18n %}
+{% load staticfiles %}
 
 {% block title %}{{ block.super }}- projet - {{project.name}}{% endblock %}
 
@@ -6,19 +8,33 @@
 
 {% block pagekey %}{{ block.super }}, projet, projets, project, projects, {{project.name}}, detail {{project.name}}{% endblock %}
 
+{% block extrahead %}
+    <link href="{% static 'css/project.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
     <div class="container">
         <div class="body-general">
             <div class="row">
-                <div class="page-header">
-                    <h1>
-                        {{project.name}}
-                    </h1>
-                    <small>Un projet de : <strong>{{project.organization}}</strong></small>
+                <div class="detail-header">
+                    <div class="col-md-2">
+                        <img src="/media/{{ MEDIA_URL }}{{ project.logo }}" alt="{{project.name}}" width="100%" class="img-responsive prj-img">
+                    </div>
+                    <div class="col-md-10">
+                        <h1>
+                            {{project.name}}
+                        </h1>
+                        <h5>
+                            Un projet de :
+                            <a href="{{ project.organization.url }}"><strong>{{project.organization}}</strong></a>
+                        </h5>
+                        <h5>Contributions: <code>{{ project.nb_contrib }}</code></h5>
+                    </div>
+
                 </div>
             </div>
+            <hr>
             <div class="row">
-
                 {% autoescape off %}
                     {{content_html}}
                 {% endautoescape %}

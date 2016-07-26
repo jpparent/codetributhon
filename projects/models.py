@@ -51,7 +51,7 @@ class Project(Timestampable, models.Model):
     )
 
     logo = models.ImageField(
-            upload_to="media/avatars_projects",
+            upload_to="avatars_projects",
             verbose_name='Logo',
             blank=True
     )
