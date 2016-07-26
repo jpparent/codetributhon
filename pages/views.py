@@ -5,6 +5,7 @@ from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth import logout
 from django.shortcuts import redirect
 from django.contrib import messages
+from django.conf import settings
 from projects.models import Contribution
 
 
@@ -13,8 +14,10 @@ class Home(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(Home, self).get_context_data(**kwargs)
-
-        context['number_of_contribution'] = 45
+        nb_contrib = Contribution.objects.filter( enabled=1).count()
+        app = settings.CONSTANT
+        context['number_of_contribution'] = app['contribution']
+        context['percent_of_contribution'] = nb_contrib
         return context
 
 

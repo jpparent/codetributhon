@@ -22,7 +22,7 @@
     <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
 
     <script>
-        var percent = {{ number_of_contribution }}
+        var percent = {{ percent_of_contribution }}
         $(".textProgress").data("animated", false).textProgress(percent);
         $(".nb-contribution").html(percent);
 
@@ -55,7 +55,7 @@
                     <div class="box-text">
                         <h2>Préparez-vous à contribuer</h2>
                         <p>
-                            Le but est d’atteindre 100 contributions dans trois  projets de logiciel  libre. Nos partenaires
+                            Le but est d’atteindre <span class="numb-contrib">{{ number_of_contribution }}</span> contributions dans trois  projets de logiciel  libre. Nos partenaires
                             Google, Red Hat et Savoir-faire Linux donnerons des ateliers spécifiques au projet.
                         </p>
                         <a href="{%  url 'projects:project_list' %}" class="btn btn-danger">Projets</a>
