@@ -23,6 +23,9 @@
     padding: 10px;
     color: white; }
 
+.form .form-group:nth-child(7) {
+  visibility: hidden !important; }
+
 @media (max-width: 415px) {
   .form-top-left {
     font-size: 10px; }

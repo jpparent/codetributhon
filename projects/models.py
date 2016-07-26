@@ -100,7 +100,8 @@ class Contribution(Timestampable, models.Model):
         verbose_name='Valider',
         null=False,
         blank=False,
-        default=False
+        default=False,
+
     )
 
     def __str__(self):
