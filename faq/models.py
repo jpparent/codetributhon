@@ -27,15 +27,23 @@ class Faq(Timestampable, models.Model):
 
     response = models.TextField(
             verbose_name='Reponse',
-            max_length=255,
             blank=False,
             null=False
     )
+
+    enabled = models.BooleanField(
+        verbose_name='Activer',
+        null=False,
+        blank=False,
+        default=False,
+
+    )
+
     category = models.ForeignKey(
             Category,
             verbose_name='Categories',
             related_name='FAQ'
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return self.question

@@ -7,8 +7,11 @@ from django.core.urlresolvers import reverse_lazy
 
 
 class FaqList(generic.ListView):
-    # List all project
+    # List all FAQ
     template_name = 'faq/list.html'
-    context_object_name = 'faq'
-    model = Faq
-    ordering = "-create_date"
+    context_object_name = 'faqs'
+
+    def get_queryset(self):
+        list_faq = Faq.objects.filter(enabled=True).order_by('-create_date')
+
+        return list_faq

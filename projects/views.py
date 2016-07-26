@@ -24,7 +24,7 @@ class ProjectList(generic.ListView):
         list_project = []
 
         for project in list_project_tmp:
-            project.nb_contrib =  Contribution.objects.filter(project_id = project.id).count()
+            project.nb_contrib =  Contribution.objects.filter(project_id = project.id, enabled=1).count()
             list_project.append(project)
 
         # meilleur methode.
@@ -57,7 +57,7 @@ class ProjectDetail(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super(ProjectDetail, self).get_context_data(**kwargs)
 
-        self.object.nb_contrib = Contribution.objects.filter(project_id=self.object.id).count()
+        self.object.nb_contrib = Contribution.objects.filter(project_id=self.object.id, enabled=1).count()
         md = markdown.Markdown()
         context['content_html'] = md.convert(self.object.description)
         return context
