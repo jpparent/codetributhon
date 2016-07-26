@@ -26,26 +26,27 @@
                 </div>
             </div>
             <div class="row">
-                {% if projects.count %}
+                {% if projects|length > 0 %}
                     {% if projects %}
                         {% for project in projects %}
+
                             <div class="col-xs-18 col-sm-6 col-md-3">
                                 <div class="thumbnail">
                                     <img src="/media/{{ MEDIA_URL }}{{ project.logo }}" alt="">
                                     <div class="caption">
                                         <h2>
-                                            <a href='{% url "projects:project_detail" project.id %}'>
-                                                {{project.name}}
+                                            <a href='{% url 'projects:project_detail' project.id%}'
+                                               title="{{project.name}}">
+                                                {{project.name|truncatechars:17}}
                                             </a>
                                         </h2>
-                                        <h4>{{project.organization}}</h4>
+                                        <h4 title="{{project.organization.name}}">
+                                            <a href="{{ project.organization.url }}">
+                                                {{project.organization.name|truncatechars:17}}
+                                            </a>
+                                        </h4>
                                         <hr>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta,
-                                            eligendi doloribus sunt minus amet sit debitis repellat. Consectetur,
-                                            culpa itaque odio similique suscipit
-                                        </p>
-
+                                        <p>{{ project.description|truncatechars:200 }}</p>
                                     </div>
                                     <div class="stat">
                                         <table class="text-center">
@@ -54,7 +55,7 @@
                                                 <td class="clr-red">Participants</td>
                                             </tr>
                                             <tr>
-                                                <td class="clr-green">68</td>
+                                                <td class="clr-green">{{ project.nb_contrib }}</td>
                                                 <td class="clr-red">3</td>
                                             </tr>
                                         </table>

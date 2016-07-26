@@ -7,6 +7,7 @@ from projects.forms import ContributionForm
 from django.contrib import messages
 from django.core.urlresolvers import reverse_lazy
 import markdown
+from django.db import connection
 
 
 class ProjectList(generic.ListView):
@@ -18,9 +19,28 @@ class ProjectList(generic.ListView):
         return super(ProjectList, self).dispatch(*args, **kwargs)
 
     def get_queryset(self):
-        list_project = Project.objects.filter(enabled=True).order_by('-create_date')
+        # cursor = connection.cursor()
 
-        return list_project
+        list_project_tmp = Project.objects.filter(organization__enabled=True, enabled=True).order_by('-create_date')
+        list_project = []
+
+        for project in list_project_tmp:
+            project.nb_contrib =  Contribution.objects.filter(project_id = project.id).count()
+            list_project.append(project)
+
+        # meilleur methode.
+        # probleme lors de la receptiondes donnees dans le template
+        '''cursor.execute("SELECT "
+                           "pp.id as prj_id, pp.name, pp.description, pp.logo, po.name as org_name, po.id as org_id, po.url, "
+                           "(SELECT count(pc.id) FROM projects_contribution pc "
+                           "WHERE pc.project_id == pp.id AND pc.enabled == 1) AS nb_contrib "
+                           "FROM projects_project pp "
+                           "INNER JOIN projects_organization po ON po.id = pp.id "
+                           "WHERE po.enabled == 1 AND pp.enabled == 1")
+
+        list_project = cursor.fetchall()'''
+
+        return  list_project
 
 
 class ProjectDetail(generic.DetailView):

@@ -18,12 +18,6 @@ class Organization(Timestampable, models.Model):
             default=False
     )
 
-    logo = models.ImageField(
-            upload_to="media/avatars_org",
-            verbose_name='Logo',
-            blank=True
-    )
-
     url = models.URLField(
             verbose_name='URL',
             max_length=255,
@@ -62,6 +56,8 @@ class Project(Timestampable, models.Model):
             blank=True
     )
 
+    nb_contrib = 0
+
     organization = models.ForeignKey(
             Organization,
             verbose_name='Organization',
@@ -98,6 +94,13 @@ class Contribution(Timestampable, models.Model):
 
     description = models.TextField(
             verbose_name='Description du projet'
+    )
+
+    enabled = models.BooleanField(
+        verbose_name='Valider',
+        null=False,
+        blank=False,
+        default=False
     )
 
     def __str__(self):
