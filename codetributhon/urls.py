@@ -30,6 +30,5 @@ if settings.DEBUG:
         url(r'^members/', include('members.urls', namespace="members")),
         url(r'^projects/', include('projects.urls', namespace="projects")),
         url(r'^faq/', include('faq.urls', namespace="faq")),
-        # url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_URL}),
     ]+ url_debug
 

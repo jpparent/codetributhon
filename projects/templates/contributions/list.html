@@ -1,0 +1,78 @@
+{% extends "landing_base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}{{ block.super }}- Contributions{% endblock %}
+
+{% block pagedesc %}{{ block.super }}liste des contributions{% endblock %}
+
+{% block pagekey %}{{ block.super }}, contribution, contributions{% endblock %}
+
+{% block extrahead %}
+    <link href="{% static 'css/contrib_list.css' %}" rel="stylesheet">
+    <link href="{% static 'css/timeLine.css' %}" rel="stylesheet">
+    <link href="{% static 'css/libs/perfect-scrollbar.min.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block extrajs %}
+    <script type="text/javascript" src="{% static 'js/libs/perfect-scrollbar.min.js' %}"></script>
+    <script>
+        window.onload = function () {
+        Ps.initialize($('#box-timeline'));
+      };
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="body-general">
+            <div class="row">
+                <div class="page-header">
+                    <h1 id="timeline">Liste des contribution</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="box-btn-contrib">
+                    <div class="text-center">
+                        <a href="{% url 'projects:contribution_create'%}" class="btn btn-success btn-lg">Envoyer votre contribution</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div id="box-timeline" class="contentHolder">
+                    <div class="content">
+
+                    <ul class="timeline">
+                        {% if contributions|length > 0 %}
+                            {% for contrib in contributions %}
+                                    <li {% if contrib.id|divisibleby:2 %}class="timeline-inverted"{% endif %}>
+                                    <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                                    <div class="timeline-panel ">
+                                        <div class="timeline-heading">
+                                              <h4 class="timeline-title">{{ contrib.username }}</h4>
+                                              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ contrib.create_date }}</small></p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <ul>
+                                                <li>Projet <a href="">{{ contrib.project.name }}</a></li>
+                                                <li><a href="{{ contrib.url }}">Lieu de la contribution</a></li>
+                                            </ul>
+                                            <p>{{ contrib.description }}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+
+                        {% else %}
+                            <div class="alert alert-warning">
+                                Il n y a aucune contributions
+                            </div>
+                        {% endif %}
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

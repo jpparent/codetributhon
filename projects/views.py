@@ -41,6 +41,20 @@ class ProjectList(generic.ListView):
 
         return  list_project
 
+class ContributionList(generic.ListView):
+    # List all project
+    template_name = 'contributions/list.html'
+    context_object_name = 'contributions'
+
+    def dispatch(self, *args, **kwargs):
+        return super(ContributionList, self).dispatch(*args, **kwargs)
+
+    def get_queryset(self):
+        # cursor = connection.cursor()
+        list_contribution = Contribution.objects.filter(enabled=True).order_by('-create_date')
+
+        return  list_contribution
+
 
 class ProjectDetail(generic.DetailView):
     # List all project
