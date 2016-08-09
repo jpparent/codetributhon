@@ -11,7 +11,6 @@
 {% block extrahead %}
     <link href="{% static 'css/contrib_list.css' %}" rel="stylesheet">
     <link href="{% static 'css/timeLine.css' %}" rel="stylesheet">
-    <link href="{% static 'css/libs/perfect-scrollbar.min.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block extrajs %}
@@ -40,7 +39,7 @@
 
             </div>
             <div class="row">
-                <div id="box-timeline" class="contentHolder">
+                <div id="box-timeline" class="col-md-10 contentHolder">
                     <div class="content">
 
                     <ul class="timeline">
@@ -51,7 +50,7 @@
                                     <div class="timeline-panel ">
                                         <div class="timeline-heading">
                                               <h4 class="timeline-title">{{ contrib.username }}</h4>
-                                              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ contrib.create_date }}</small></p>
+                                              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ contrib.create_date | date:"m/d/Y" }}</small></p>
                                         </div>
                                         <div class="timeline-body">
                                             <ul>
