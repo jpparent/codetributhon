@@ -6,6 +6,8 @@ class Category(Timestampable, models.Model):
     class Meta:
         verbose_name_plural = 'Categories'
 
+    list_faq = []
+
     label = models.CharField(
             verbose_name='Label',
             max_length=255
@@ -42,7 +44,8 @@ class Faq(Timestampable, models.Model):
     category = models.ForeignKey(
             Category,
             verbose_name='Categories',
-            related_name='FAQ'
+            related_name='FAQ',
+            on_delete=models.CASCADE
     )
 
     def __str__(self):

@@ -136,7 +136,14 @@
 
                 <div class="row">
                     <div class="text-center">
-                        <a href="{% url 'projects:contribution_create' %}" class="btn btn-success btn-lg">Envoyer votre contribution</a>
+                        <a href="{% url 'projects:contribution_list'%}"  class="btn btn-success btn-lg">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                            Liste des contributions
+                        </a>
+                        <a href="{% url 'projects:contribution_create' %}" class="btn btn-success btn-lg">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            Envoyer votre contribution
+                        </a>
                     </div>
                 </div>
 
