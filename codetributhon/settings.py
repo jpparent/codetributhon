@@ -26,7 +26,7 @@ SECRET_KEY = 'ml2k-pm-mmz%i+^__ax6&-vn_eex+(j5q@pjy!ij*i8f&xb)7@khm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['http://104.196.16.145/']
+ALLOWED_HOSTS = ['http://104.196.59.12/']
 
 
 # Application definition
@@ -84,8 +84,11 @@ WSGI_APPLICATION = 'codetributhon.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.codetributhon'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'codetributhondb',
+        'USER': 'root',
+        'PASSWORD': 'ml2_codeTribuThon',
+        'HOST': '',
     }
 }
 
