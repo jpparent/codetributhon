@@ -84,8 +84,11 @@ WSGI_APPLICATION = 'codetributhon.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.codetributhon'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'codetributhondb',
+        'USER': 'root',
+        'PASSWORD': 'ml2_codeTribuThon',
+        'HOST': '',
     }
 }
 
