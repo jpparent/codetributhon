@@ -105,6 +105,11 @@
   color: red;
   font-size: 1.5em; }
 
+/* c'est quoi le codetributhon
+=================================================================== */
+img[alt="marathon"], img[alt="communaute"], img[alt="activites"] {
+  margin-bottom: 20px; }
+
 /* partners
 =================================================================== */
 .bloc-img-partner {

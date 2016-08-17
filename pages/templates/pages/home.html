@@ -22,8 +22,7 @@
     <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
 
     <script>
-        //var percent = {{ percent_of_contribution }}
-        var percent = 40;
+        var percent = {{ percent_of_contribution }};
         $(".textProgress").data("animated", false).textProgress(percent);
         $(".nb-contribution").html(percent);
 
@@ -145,7 +144,7 @@
                 <br>
                 <div class="col-md-4">
                     <div class="icons-box">
-                        <img src="{% static 'img/img_desc/marathon.png' %}" alt="logo linux" width="50%">
+                        <img src="{% static 'img/img_desc/marathon.png' %}" alt="marathon" width="50%">
                         <div class="title"><h3>Un marathon</h3></div>
                         <p>
                             Un marathon de contributions étudiants sur 4 projets en logiciel libre.
@@ -156,7 +155,7 @@
 
                 <div class="col-md-4">
                     <div class="icons-box">
-                        <img src="{% static 'img/img_desc/activities.png' %}" alt="logo linux" width="50%">
+                        <img src="{% static 'img/img_desc/activities.png' %}" alt="activites" width="50%">
                         <div class="title"><h3>Des activités</h3></div>
                         <p>
                             Une foule d’activités: ateliers, conférences, 5à7, projection vidéo et bien plus!
@@ -167,7 +166,7 @@
 
                 <div class="col-md-4">
                     <div class="icons-box">
-                        <img src="{% static 'img/img_desc/community.png' %}" alt="logo linux" width="50%">
+                        <img src="{% static 'img/img_desc/community.png' %}" alt="communaute" width="50%">
                         <div class="title"><h3>La communauté</h3></div>
                         <p>
                             Débutants comme experts sont les bienvenus pour participer, s’entraider, contribuer et faire grandir la communauté du libre!
