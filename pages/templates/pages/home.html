@@ -22,7 +22,7 @@
     <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
 
     <script>
-        var percent = {{ percent_of_contribution }}
+        var percent = {{ percent_of_contribution }};
         $(".textProgress").data("animated", false).textProgress(percent);
         $(".nb-contribution").html(percent);
 
@@ -44,41 +44,39 @@
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <div class="box-text">
-                        <h2>Un, deux, trois GO!</h2>
+                        <h2>1, 2, 3 GO!</h2>
                         <p>
-                            C’est enfin parti pour le c0deTribuTh0n 2016! Du 15 septembre au 2 décembre 2016 participez à nos
-                            activités! Plusieurs prix à gagner.
+                            C’est enfin parti pour le codetributhon 2016! Du 15 septembre au 2 décembre 2016 participez à nos
+                            activités! Plusieurs prix à gagner. Plusieurs prix à gagner.
                         </p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="box-text">
-                        <h2>Préparez-vous à contribuer</h2>
+                        <h2>Un marathon de contributions!</h2>
                         <p>
-                            Le but est d’atteindre <span class="numb-contrib">{{ number_of_contribution }}</span> contributions dans trois  projets de logiciel  libre. Nos partenaires
-                            Google, Red Hat et Savoir-faire Linux donnerons des ateliers spécifiques au projet.
+                            Le but est d’atteindre <span class="numb-contrib">{{ number_of_contribution }}</span> contributions dans 4 projets de logiciel libre.
                         </p>
-                        <a href="{%  url 'projects:project_list' %}" class="btn btn-danger">Projets</a>
+                        <a href="{%  url 'projects:project_list' %}" class="btn btn-danger btn-lg">Projets</a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="box-text">
                         <h2>Joins-toi à nous!</h2>
                         <p>
-                            Pour participer, rien de plus simple. Inscris-toi aux ateliers, contribue, envoie-nous URL
-                            de ton commit. Les meilleurs contributeurs étudiants pourront gagner des prix.
+                            Pour participer, rien de plus simple. Inscris-toi aux ateliers, contribue et envoie URL de ton commit.
+                            Les meilleurs contributeurs étudiants gagneront des prix.
                         </p>
-                        <a href="" class="btn btn-danger">Insrivez-vous</a>
+                        <a href="" class="btn btn-danger btn-lg">Insrivez-vous</a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="box-text">
                         <h2>Participez au coup d’envoi chez Google Montréal!</h2>
                         <p>
-                            Venez célébrer le grand départ du c0deTribuTh0n 2016 chez Google Montréal de 8 h à
-                            20 h le jeudi 15 septembre.
+                            Viens célébrer le grand départ du codetributhon 2016 chez Google Montréal jeudi le 15 septembre de 18 h à 20 h.
                         </p>
-                        <a href="" class="btn btn-danger">Insrivez-vous</a>
+                        <a href="" class="btn btn-danger btn-lg">Insrivez-vous</a>
                     </div>
                 </div>
             </div>
@@ -106,26 +104,16 @@
 
         <!--start: Container -->
         <div class="container">
-            <section class="hero-unit">
-                <h2 class="text-center">Pourquoi participer au C0deTribuThon?</h2>
-                <br>
-                <p>
-                    Pour développer tes compétences dans de nouveaux langages et en logiciel libre tout en
-                    faisant partie d’une grande communauté afin de participer à des ateliers donnés par
-                    des programmeurs / mentors provenant de nos entreprises partenaires.
-                </p>
-
-
-            </section>
-            <hr>
 
             <section id="contributions">
                 <div class="row">
+                    <h1 class="text-center">Où en sommes nous?</h1>
+                    <br>
                     <div id="progress-bar" class="hidden-xs hidden-sm">
                         <div class="textProgress">
-                            <span class="tp">CODETRIBUTHON <i class="fa fa-linux"></i></span>
-                            <span class="tp">CODETRIBUTHON <i class="fa fa-linux"></i></span>
-                            <div class="progress"><span class="percent">20%</span></div>
+                            <span class="tp">CODETRIBUTHON</span>
+                            <span class="tp">CODETRIBUTHON</span>
+                            <div class="progress"><span class="percent"></span></div>
                         </div>
                     </div>
                     <div class="hidden-md hidden-lg text-center ">
@@ -136,11 +124,11 @@
 
                 <div class="row">
                     <div class="text-center">
-                        <a href="{% url 'projects:contribution_list'%}"  class="btn btn-success btn-lg">
+                        <a href="{% url 'projects:contribution_list'%}"  class="btn btn-success btn-lg btn-access-contrib">
                             <i class="fa fa-list" aria-hidden="true"></i>
                             Liste des contributions
                         </a>
-                        <a href="{% url 'projects:contribution_create' %}" class="btn btn-success btn-lg">
+                        <a href="{% url 'projects:contribution_create' %}" class="btn btn-success btn-lg btn-access-contrib">
                             <i class="fa fa-plus" aria-hidden="true"></i>
                             Envoyer votre contribution
                         </a>
@@ -152,14 +140,14 @@
 
             <!-- start: Row -->
             <div class="row">
-                     <h1 class="text-center">C'est quoi C0deTribuThon?</h1>
+                     <h1 class="text-center">C'est quoi le codetributhon?</h1>
                 <br>
                 <div class="col-md-4">
                     <div class="icons-box">
-                        <img src="{% static 'img/img_desc/marathon.png' %}" alt="logo linux" width="50%">
+                        <img src="{% static 'img/img_desc/marathon.png' %}" alt="marathon" width="50%">
                         <div class="title"><h3>Un marathon</h3></div>
                         <p>
-                            Un marathon de contributions étudiantes sur des projets libres
+                            Un marathon de contributions étudiants sur 4 projets en logiciel libre.
                         </p>
                         <div class="clear"></div>
                     </div>
@@ -167,10 +155,10 @@
 
                 <div class="col-md-4">
                     <div class="icons-box">
-                        <img src="{% static 'img/img_desc/activities.png' %}" alt="logo linux" width="50%">
+                        <img src="{% static 'img/img_desc/activities.png' %}" alt="activites" width="50%">
                         <div class="title"><h3>Des activités</h3></div>
                         <p>
-                            Participez à nos activités: ateliers, conférences, 5à7, projection vidéo, party et plus!.
+                            Une foule d’activités: ateliers, conférences, 5à7, projection vidéo et bien plus!
                         </p>
                         <div class="clear"></div>
                     </div>
@@ -178,11 +166,10 @@
 
                 <div class="col-md-4">
                     <div class="icons-box">
-                        <img src="{% static 'img/img_desc/community.png' %}" alt="logo linux" width="50%">
+                        <img src="{% static 'img/img_desc/community.png' %}" alt="communaute" width="50%">
                         <div class="title"><h3>La communauté</h3></div>
                         <p>
-                            Débutants, experts sont les bienvenus pour participer,
-                            s’entraider, contribuer.
+                            Débutants comme experts sont les bienvenus pour participer, s’entraider, contribuer et faire grandir la communauté du libre!
                         </p>
                         <div class="clear"></div>
                     </div>
@@ -200,14 +187,17 @@
                 <br><br>
                 <div class="col-md-12">
                     <div class="col-md-3">
-                        <div class="bloc-img-partner"><img src="{% static 'img/partners/ff.png' %}" alt="mozilla" width="65%"></div>
-                    </div>
-                    <div class="col-md-3">
                         <div class="bloc-img-partner"><img src="{% static 'img/partners/google.png' %}" alt="google" class="img-responsive" ></div>
                     </div>
+
                     <div class="col-md-3">
                         <div class="bloc-img-partner"><img src="{% static 'img/partners/redhat.png' %}" alt="redhat" class="img-responsive" ></div>
                     </div>
+
+                    <div class="col-md-3">
+                        <div class="bloc-img-partner"><img src="{% static 'img/partners/ff.png' %}" alt="mozilla" width="65%"></div>
+                    </div>
+
                     <div class="col-md-3">
                         <div class="bloc-img-partner"><img src="{% static 'img/partners/sflinux.png' %}" alt="savoir faire linux" class="img-responsive"></div>
                     </div>

@@ -56,15 +56,15 @@ a {
 =================================================================== */
 #logo a {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 175px;
+  height: 175px;
   background-image: url(logo.png);
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 150px 150px;
+  background-size: 175px 175px;
   text-indent: -9000px;
   position: absolute;
-  top: 5px;
+  top: 9px;
   left: 0;
   z-index: 20;
   -webkit-transition: top 0.2s ease;
@@ -111,7 +111,8 @@ a {
   font-size: 27px; }
 
 #main-nav li a {
-  color: #f3e4c8; }
+  color: #f3e4c8;
+  font-weight: bolder; }
 
 #main-nav li a:hover {
   color: #fff; }
@@ -130,6 +131,9 @@ a {
 
 .system-message {
   margin-top: 60px !important; }
+
+.btn-access-contrib {
+  width: 300px !important; }
 
 /* Footer
 ====================================================================== */
@@ -170,7 +174,9 @@ a {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  width: 16.66667% !important;
+  text-align: center; }
 
 #footer-menu-links ul li a {
   display: inline-block;
@@ -216,7 +222,8 @@ a {
   padding: 2px 0px !important;
   margin-bottom: 10px;
   color: #666;
-  border-bottom: 5px double #f6f6f6; }
+  border-bottom: 5px double #f6f6f6;
+  text-align: center; }
 
 /* Newsletter Form
 ====================================================================== */
