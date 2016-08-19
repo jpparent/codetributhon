@@ -54,7 +54,11 @@
                                         </h4>
                                         <h5>Contributions: <code>{{ project.nb_contrib }}</code></h5>
                                         <hr>
-                                        <p>{{ project.description|truncatechars:200 }}</p>
+                                        <p>
+                                            {% autoescape off %}
+                                                {{ project.description|truncatechars:200 }}
+                                            {% endautoescape %}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
