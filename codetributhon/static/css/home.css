@@ -108,14 +108,14 @@
 /* c'est quoi le codetributhon
 =================================================================== */
 img[alt="marathon"], img[alt="communaute"], img[alt="activites"] {
-  margin-bottom: 20px; }
+  margin-bottom: 25px; }
 
 /* partners
 =================================================================== */
 .bloc-img-partner {
   height: 200px;
   text-align: center; }
-  .bloc-img-partner img[alt="redhat"], .bloc-img-partner img[alt="savoir faire linux"] {
+  .bloc-img-partner img[alt="redhat"], .bloc-img-partner img[alt="collabora"], .bloc-img-partner img[alt="savoir faire linux"] {
     padding-top: 45px; }
 
 /* Notice

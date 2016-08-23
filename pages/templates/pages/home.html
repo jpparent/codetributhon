@@ -46,8 +46,8 @@
                     <div class="box-text">
                         <h2>1, 2, 3 GO!</h2>
                         <p>
-                            C’est enfin parti pour le codetributhon 2016! Du 15 septembre au 2 décembre 2016 participez à nos
-                            activités! Plusieurs prix à gagner. Plusieurs prix à gagner.
+                            C’est enfin parti pour le codetributhon 2016! <br>Du 15 septembre au 2 décembre 2016 participez à nos
+                            activités! Plusieurs prix à gagner. <br>Plusieurs prix à gagner.
                         </p>
                     </div>
                 </div>
@@ -64,19 +64,18 @@
                     <div class="box-text">
                         <h2>Joins-toi à nous!</h2>
                         <p>
-                            Pour participer, rien de plus simple. Inscris-toi aux ateliers, contribue et envoie URL de ton commit.
+                            Pour participer, rien de plus simple.<br> Inscris-toi aux ateliers, contribue et envoie URL de ton commit.<br>
                             Les meilleurs contributeurs étudiants gagneront des prix.
                         </p>
-                        <a href="" class="btn btn-danger btn-lg">Insrivez-vous</a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="box-text">
-                        <h2>Participez au coup d’envoi chez Google Montréal!</h2>
+                        <h2>Participe au coup d’envoi chez Google Montréal!</h2>
                         <p>
                             Viens célébrer le grand départ du codetributhon 2016 chez Google Montréal jeudi le 15 septembre de 18 h à 20 h.
                         </p>
-                        <a href="" class="btn btn-danger btn-lg">Insrivez-vous</a>
+                        <a href="" class="btn btn-danger btn-lg"> Inscris-toi </a>
                     </div>
                 </div>
             </div>
@@ -107,7 +106,7 @@
 
             <section id="contributions">
                 <div class="row">
-                    <h1 class="text-center">Où en sommes nous?</h1>
+                    <h1 class="text-center">Contributions cumulées</h1>
                     <br>
                     <div id="progress-bar" class="hidden-xs hidden-sm">
                         <div class="textProgress">
@@ -124,13 +123,13 @@
 
                 <div class="row">
                     <div class="text-center">
-                        <a href="{% url 'projects:contribution_list'%}"  class="btn btn-success btn-lg btn-access-contrib">
+                        <a href="{% url 'projects:contribution_list'%}"  class="btn btn-danger btn-lg btn-access-contrib">
                             <i class="fa fa-list" aria-hidden="true"></i>
                             Liste des contributions
                         </a>
-                        <a href="{% url 'projects:contribution_create' %}" class="btn btn-success btn-lg btn-access-contrib">
+                        <a href="{% url 'projects:contribution_create' %}" class="btn btn-danger btn-lg btn-access-contrib">
                             <i class="fa fa-plus" aria-hidden="true"></i>
-                            Envoyer votre contribution
+                            Envoyez votre contribution
                         </a>
                     </div>
                 </div>
@@ -147,7 +146,7 @@
                         <img src="{% static 'img/img_desc/marathon.png' %}" alt="marathon" width="50%">
                         <div class="title"><h3>Un marathon</h3></div>
                         <p>
-                            Un marathon de contributions étudiants sur 4 projets en logiciel libre.
+                            Un marathon de contributions étudiantes, atteindre 100 contributions dans 4 projets en logiciel libre.
                         </p>
                         <div class="clear"></div>
                     </div>
@@ -183,23 +182,40 @@
             <!-- start: Row -->
             <div class="row" id="bloc-partners">
                 <h1 class="text-center">Nos partenaires</h1>
-                <h3 class="text-center">Edition 2016</h3>
                 <br><br>
                 <div class="col-md-12">
                     <div class="col-md-3">
-                        <div class="bloc-img-partner"><img src="{% static 'img/partners/google.png' %}" alt="google" class="img-responsive" ></div>
+                        <div class="bloc-img-partner">
+                            <a href="https://abc.xyz/">
+                                <img src="{% static 'img/partners/google.png' %}" alt="google" class="img-responsive" >
+                            </a>
+                            
+                        </div>
                     </div>
 
                     <div class="col-md-3">
-                        <div class="bloc-img-partner"><img src="{% static 'img/partners/redhat.png' %}" alt="redhat" class="img-responsive" ></div>
+                        <div class="bloc-img-partner">
+                            <a href="https://www.redhat.com/en">
+                                <img src="{% static 'img/partners/redhat.png' %}" alt="redhat" class="img-responsive" >
+                            </a>
+
+                        </div>
                     </div>
 
                     <div class="col-md-3">
-                        <div class="bloc-img-partner"><img src="{% static 'img/partners/ff.png' %}" alt="mozilla" width="65%"></div>
+                        <div class="bloc-img-partner">
+                            <a href="https://www.collabora.com/">
+                                <img src="{% static 'img/partners/collabora.png' %}" alt="collabora" width="100%">
+                            </a>
+                        </div>
                     </div>
 
                     <div class="col-md-3">
-                        <div class="bloc-img-partner"><img src="{% static 'img/partners/sflinux.png' %}" alt="savoir faire linux" class="img-responsive"></div>
+                        <div class="bloc-img-partner">
+                            <a href="https://www.savoirfairelinux.com/">
+                                <img src="{% static 'img/partners/sflinux.png' %}" alt="savoir faire linux" class="img-responsive">
+                            </a>
+                        </div>
                     </div>
 
                 </div>

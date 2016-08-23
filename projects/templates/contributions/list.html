@@ -22,7 +22,8 @@
 
         $(function(){
             //show description
-            $('.btn-show-desc').on('click', function(){
+            $('.btn-show-desc').on('click', function(e){
+                e.preventDefault();
                 var $btn = $(this);
                 $btn.addClass('hide');
                 $btn.siblings('.btn-hide-desc').removeClass('hide');
@@ -32,7 +33,8 @@
             });
 
             //hide description
-            $('.btn-hide-desc').on('click', function(){
+            $('.btn-hide-desc').on('click', function(e){
+                e.preventDefault();
                 var $btn = $(this);
                 $btn.addClass('hide');
                 $btn.siblings('.btn-show-desc').removeClass('hide');
