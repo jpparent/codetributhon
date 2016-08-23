@@ -115,8 +115,10 @@ img[alt="marathon"], img[alt="communaute"], img[alt="activites"] {
 .bloc-img-partner {
   height: 200px;
   text-align: center; }
-  .bloc-img-partner img[alt="redhat"], .bloc-img-partner img[alt="collabora"], .bloc-img-partner img[alt="savoir faire linux"] {
-    padding-top: 45px; }
+  .bloc-img-partner img[alt="redhat"], .bloc-img-partner img[alt="savoir faire linux"] {
+    padding-top: 30px; }
+  .bloc-img-partner img[alt="collabora"] {
+    padding-top: 55px; }
 
 /* c'est quoi le codetributhon
 =================================================================== */
@@ -130,7 +132,7 @@ img[alt="marathon"], img[alt="communaute"], img[alt="activites"] {
 ====================================================================== */
 .hero-unit {
   background: #fff url(../img/bg-k10.png);
-  border-left: 4px solid #c72323;
+  border-left: 4px solid #f10000;
   padding: 13px 13px 13px 15px;
   font-style: italic;
   margin: 20px auto;

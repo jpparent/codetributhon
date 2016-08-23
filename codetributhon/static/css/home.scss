@@ -157,8 +157,11 @@ img[alt="marathon"], img[alt="communaute"], img[alt="activites"]{
     height: 200px;
     text-align: center;
 
-    img[alt="redhat"],img[alt="collabora"], img[alt="savoir faire linux"]{
-       padding-top: 45px;
+    img[alt="redhat"], img[alt="savoir faire linux"]{
+       padding-top: 30px;
+    }
+    img[alt="collabora"]{
+        padding-top: 55px;
     }
 }
 
