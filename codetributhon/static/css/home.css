@@ -118,6 +118,14 @@ img[alt="marathon"], img[alt="communaute"], img[alt="activites"] {
   .bloc-img-partner img[alt="redhat"], .bloc-img-partner img[alt="collabora"], .bloc-img-partner img[alt="savoir faire linux"] {
     padding-top: 45px; }
 
+/* c'est quoi le codetributhon
+=================================================================== */
+.bloc-ml2 {
+  padding: 10px 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bolder; }
+
 /* Notice
 ====================================================================== */
 .hero-unit {
