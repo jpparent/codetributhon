@@ -130,7 +130,7 @@ img[alt="marathon"], img[alt="communaute"], img[alt="activites"] {
 ====================================================================== */
 .hero-unit {
   background: #fff url(../img/bg-k10.png);
-  border-left: 4px solid #c72323;
+  border-left: 4px solid #f10000;
   padding: 13px 13px 13px 15px;
   font-style: italic;
   margin: 20px auto;
