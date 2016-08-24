@@ -27,9 +27,9 @@
 	.event-list > li:nth-child(even) > time {
 		background-color: rgb(165, 82, 167);
 	}
-	.event-list > li > time > span {
+	/*.event-list > li > time > span {
 		display: none;
-	}
+	}*/
 	.event-list > li > time > .day {
 		display: block;
 		font-size: 56pt;
@@ -59,6 +59,7 @@
 		font-weight: 300;
 		margin: 0px;
 	}
+
 	.event-list > li > .info > ul,
 	.event-list > li > .social > ul {
 		display: table;
@@ -74,7 +75,7 @@
 	.event-list > li > .info > ul > li,
 	.event-list > li > .social > ul > li {
 		display: table-cell;
-		cursor: pointer;
+		/*cursor: pointer;*/
 		color: rgb(30, 30, 30);
 		font-size: 11pt;
 		font-weight: 300;
@@ -82,7 +83,7 @@
 	}
     .event-list > li > .info > ul > li > a {
 		display: block;
-		width: 100%;
+		width: 50%;
 		color: rgb(30, 30, 30);
 		text-decoration: none;
 	}
@@ -92,7 +93,7 @@
     .event-list > li > .social > ul > li > a {
         padding: 3px 0px;
 	}
-	.event-list > li > .info > ul > li:hover,
+	/*.event-list > li > .info > ul > li:hover,*/
 	.event-list > li > .social > ul > li:hover {
 		color: rgb(30, 30, 30);
 		background-color: rgb(200, 200, 200);
@@ -128,7 +129,7 @@
 			position: relative;
 			display: block;
 			width: 100%;
-			height: 120px;
+			height: 140px;
 			padding: 0px;
 		}
 		.event-list > li > time,
@@ -137,7 +138,7 @@
 		}
 		.event-list > li > time,
 		.event-list > li > img {
-			width: 120px;
+			width: 140px;
 			float: left;
 		}
 		.event-list > li > .info {
@@ -146,14 +147,14 @@
 		}
 		.event-list > li > time,
 		.event-list > li > img {
-			width: 120px;
-			height: 120px;
+			width: 140px;
+			height: 140px;
 			padding: 0px;
 			margin: 0px;
 		}
 		.event-list > li > .info {
 			position: relative;
-			height: 120px;
+			height: 140px;
 			text-align: left;
 			padding-right: 40px;
 		}
