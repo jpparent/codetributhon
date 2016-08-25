@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ml2k-pm-mmz%i+^__ax6&-vn_eex+(j5q@pjy!ij*i8f&xb)7@khm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['http://104.196.16.145/']
 
@@ -84,11 +84,8 @@ WSGI_APPLICATION = 'codetributhon.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'codetributhondb',
-        'USER': 'root',
-        'PASSWORD': 'ml2_codeTribuThon',
-        'HOST': '',
+        'ENGINE': 'django.db.backends.sqlite3', 'NAME': 'codetributhon',
+        'NAME': os.path.join(BASE_DIR, 'db.codetributhon'),
     }
 }
 

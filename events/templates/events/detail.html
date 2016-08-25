@@ -1,0 +1,51 @@
+{% extends "landing_base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}{{ block.super }}- {{ events.title }}{% endblock %}
+
+{% block pagedesc %}{{ block.super }}détail de l'évènement {{ events.title }}{% endblock %}
+
+{% block pagekey %}{{ block.super }}, évènement, evenemtent, event, {{ events.subTitle }}, detail {{ events.title }}{% endblock %}
+
+{% block extrahead %}
+    <style>
+        /*.body{ background: url("/media/{{ MEDIA_URL }}{{ events.logo }}") no-repeat center top; background-size: 100% 100% }
+        .body-general{ background-color: rgba(255, 255, 255, 0.95); padding: 0 30px; }*/
+    .btn-url{
+        color: black;}
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="body-general">
+            <div class="row">
+                <div class="page-header">
+
+                        <img src="/media/{{ MEDIA_URL }}{{ events.logo }}" alt="{{events.title}}" class="img-responsive prj-img" width="30%">
+
+                        <h1>
+                            {{events.title}}<br>
+                            <small>{{ events.subTitle }}</small>
+                        </h1>
+                        <h5>{{ events.dateEvent|date:"d M Y" }}  a {{ events.time }}</h5>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <p>
+                    <b>Location:</b> {{ events.location }}
+                </p>
+                {% autoescape off %}
+                    {{content_html}}
+                {% endautoescape %}
+                <div>
+                    <a href="{{ event.url }}" class="btn btn-warning btn-sm btn-url"><span class="fa fa-globe"></span> Website</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

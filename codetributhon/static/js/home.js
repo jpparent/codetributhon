@@ -12,7 +12,7 @@ $(function(){
     ], {duration: 3000, fade: 750});
 
     $('.carousel').carousel({
-        pause: "null"
+        interval: 5000
     })
 
 });

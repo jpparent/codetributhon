@@ -19,6 +19,30 @@
         window.onload = function () {
         Ps.initialize($('#box-timeline'));
       };
+
+        $(function(){
+            //show description
+            $('.btn-show-desc').on('click', function(e){
+                e.preventDefault();
+                var $btn = $(this);
+                $btn.addClass('hide');
+                $btn.siblings('.btn-hide-desc').removeClass('hide');
+
+                var $parent = $btn.parents('.bloc-desc');
+                $parent.find('.description').removeClass('hide');
+            });
+
+            //hide description
+            $('.btn-hide-desc').on('click', function(e){
+                e.preventDefault();
+                var $btn = $(this);
+                $btn.addClass('hide');
+                $btn.siblings('.btn-show-desc').removeClass('hide');
+
+                var $parent = $btn.parents('.bloc-desc');
+                $parent.find('.description').addClass('hide');
+            });
+        });
     </script>
 {% endblock %}
 
@@ -33,7 +57,7 @@
             <div class="row">
                 <div class="box-btn-contrib">
                     <div class="text-center">
-                        <a href="{% url 'projects:contribution_create'%}" class="btn btn-success btn-lg">Envoyer votre contribution</a>
+                        <a href="{% url 'projects:contribution_create'%}" class="btn btn-danger btn-lg btn-access-contrib">Envoyer votre contribution</a>
                     </div>
                 </div>
 
@@ -46,7 +70,7 @@
                         {% if contributions|length > 0 %}
                             {% for contrib in contributions %}
                                     <li {% if contrib.id|divisibleby:2 %}class="timeline-inverted"{% endif %}>
-                                    <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                                    <div class="timeline-badge"><i class="glyphicon glyphicon-ok"></i></div>
                                     <div class="timeline-panel ">
                                         <div class="timeline-heading">
                                               <h4 class="timeline-title">{{ contrib.username }}</h4>
@@ -54,10 +78,17 @@
                                         </div>
                                         <div class="timeline-body">
                                             <ul>
-                                                <li>Projet <a href="">{{ contrib.project.name }}</a></li>
+                                                <li>Projet <a href="{% url 'projects:project_detail' contrib.project.id%}">{{ contrib.project.name }}</a></li>
                                                 <li><a href="{{ contrib.url }}">Lieu de la contribution</a></li>
                                             </ul>
-                                            <p>{{ contrib.description }}</p>
+                                            <div class="bloc-desc">
+                                                <p>
+                                                    <a href="#" class="btn-show-desc">Afficher la description</a>
+                                                    <a href="#" class="btn-hide-desc hide">Fermer la description</a>
+                                                </p>
+
+                                                <p class="description hide">{{ contrib.description }}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
