@@ -29,7 +29,7 @@
                             {{events.title}}<br>
                             <small>{{ events.subTitle }}</small>
                         </h1>
-                        <h5>{{ events.dateEvent }}  {{ events.time }}</h5>
+                        <h5>{{ events.dateEvent|date:"d M Y" }}  a {{ events.time }}</h5>
 
                 </div>
             </div>
