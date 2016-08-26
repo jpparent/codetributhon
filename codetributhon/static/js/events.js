@@ -3,13 +3,13 @@
  */
 
 $(function(){
-    var url = "http://www.codetributhon.com/";
+    var url = "http://www.codetributhon.com";
 
    //partager sur facebook
     $('.share_fb').on('click', function (e){
         e.preventDefault();
 
-        url+$(this).data('url')
+        url+=$(this).data('url');
         var share_url = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(url) +"&amp;src=sdkprepars";
 
         sharePopupCenter(share_url, "Partagez sur Facebook1");
@@ -19,7 +19,7 @@ $(function(){
     $('.share_tw').on('click', function (e) {
         e.preventDefault();
 
-        url+$(this).data('url')
+        url+=$(this).data('url')
         var share_url = "https://twitter.com/intent/tweet?&url="+ encodeURIComponent(url) +"&via=codetributhon"
 
         sharePopupCenter(share_url, "Partagez sur twitter");
