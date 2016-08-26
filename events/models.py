@@ -60,7 +60,7 @@ class Events(Timestampable, models.Model):
         max_length=255,
         blank=False,
         null=False,
-        default='EventBrite'
+        default='Inscrit-toi'
     )
 
     url = models.URLField(
