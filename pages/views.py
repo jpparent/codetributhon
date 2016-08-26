@@ -13,10 +13,6 @@ from django.db import connection
 class Home(generic.TemplateView):
     template_name = 'pages/home.html'
 
-    def get_queryset(self):
-        cursor = connection.cursor()
-        cursor.execute("DELETE FROM django_migrations WHERE app='events'")
-
     def get_context_data(self, **kwargs):
         context = super(Home, self).get_context_data(**kwargs)
         nb_contrib = Contribution.objects.filter( enabled=1).count()
