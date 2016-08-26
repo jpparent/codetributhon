@@ -9,7 +9,8 @@ $(function(){
     $('.share_fb').on('click', function (e){
         e.preventDefault();
 
-        share_url = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent($(this).data('url')) +"&amp;src=sdkprepars";
+        var url = "http://www.codetributhon.com/"+ $(this).data('url')
+        var share_url = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(url) +"&amp;src=sdkprepars";
 
         sharePopupCenter(share_url, "Partagez sur Facebook1");
     });
@@ -18,7 +19,7 @@ $(function(){
     $('.share_tw').on('click', function (e) {
         e.preventDefault();
 
-        var url = "https://about.twitter.com/fr/resources/buttons#tweet"
+        var url = "http://www.codetributhon.com/"+ $(this).data('url')
         var share_url = "https://twitter.com/intent/tweet?&url="+ encodeURIComponent(url) +"&via=codetributhon"
 
         sharePopupCenter(share_url, "Partagez sur twitter");
