@@ -7,10 +7,15 @@ from django.shortcuts import redirect
 from django.contrib import messages
 from django.conf import settings
 from projects.models import Contribution
+from django.db import connection
 
 
 class Home(generic.TemplateView):
     template_name = 'pages/home.html'
+
+    def get_queryset(self):
+        cursor = connection.cursor()
+        cursor.execute("DELETE FROM django_migrations WHERE app='events'")
 
     def get_context_data(self, **kwargs):
         context = super(Home, self).get_context_data(**kwargs)
@@ -19,6 +24,8 @@ class Home(generic.TemplateView):
         context['number_of_contribution'] = app['contribution']
         context['percent_of_contribution'] = nb_contrib
         return context
+
+
 
 
 class Contact(generic.TemplateView):
