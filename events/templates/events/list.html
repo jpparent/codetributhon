@@ -22,7 +22,16 @@
 {% endblock %}
 
 {% block extrajs %}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.7";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
+    <script type="text/javascript" src="{% static 'js/events.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -53,7 +62,7 @@
 
                                     <div class="info">
                                         <h2 class="title">
-                                            <a href="{% url 'events:event_detail' event.id%}">
+                                            <a href="{% url 'events:event_detail' event.id %}">
                                                 {{ event.title | truncatechars:30 }}
                                             </a><br>
                                             <small>{{ event.subTitle | truncatechars:50 }}</small>
@@ -62,7 +71,9 @@
 
                                         <ul class="access-event">
                                             <li>
-                                                <a href="{{ event.url }}" class="btn btn-warning btn-sm"><span class="fa fa-globe"></span> Website</a>
+                                                <a href="{{ event.url }}" class="btn btn-warning btn-sm">
+                                                    <span class="fa fa-globe"></span> {{ event.name_url }}
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -70,13 +81,14 @@
                                     <div class="social">
                                         <ul>
                                             <li class="facebook" style="width:0;">
-                                                <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                                                <a href="#" data-url="{% url 'events:event_detail' event.id %}" class="share_fb">
+                                                    <span class="fa fa-facebook"></span>
+                                                </a>
                                             </li>
                                             <li class="twitter" style="width:0;">
-                                                <a href="#twitter"><span class="fa fa-twitter"></span></a>
-                                            </li>
-                                            <li class="google-plus" style="width:0;">
-                                                <a href="#google-plus"><span class="fa fa-google-plus"></span></a>
+                                                <a href="#" data-url="{% url 'events:event_detail' event.id %}" class="share_tw">
+                                                    <span class="fa fa-twitter"></span>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
