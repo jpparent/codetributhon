@@ -55,10 +55,19 @@ class Events(Timestampable, models.Model):
         blank=True,
     )
 
+    name_url = models.CharField(
+        verbose_name='Nom de l\'url',
+        max_length=255,
+        blank=False,
+        null=False,
+        default='Inscrit-toi'
+    )
+
     url = models.URLField(
         verbose_name='URL',
         max_length=255,
-        blank=True
+        blank=False,
+        null=False,
     )
 
     def __str__(self):

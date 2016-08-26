@@ -16,6 +16,16 @@
         color: black;}
     </style>
 {% endblock %}
+{% block extrajs %}
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{% endblock %}
 
 {% block content %}
     <div class="container">
@@ -42,7 +52,25 @@
                     {{content_html}}
                 {% endautoescape %}
                 <div>
-                    <a href="{{ event.url }}" class="btn btn-warning btn-sm btn-url"><span class="fa fa-globe"></span> Website</a>
+
+                    <ul class="list-inline">
+                        <li>
+                            <a href="{{ events.url }}" class="btn btn-warning btn-sm btn-url">
+                                <span class="fa fa-globe"></span> {{ events.name_url }}
+                            </a>
+                        </li>
+                        <li>
+                            <div class="fb-share-button" data-href="{% url 'events:event_detail' events.id %}" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+                                <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={% url 'events:event_detail' events.id %}&amp;src=sdkpreparse">Partager</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{% url 'events:event_detail' events.id %}" data-via="codetributhon" data-size="large">
+                                Tweet
+                            </a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -30,6 +30,9 @@
 	/*.event-list > li > time > span {
 		display: none;
 	}*/
+	.event-list .year  {
+		display: none;
+	}
 	.event-list > li > time > .day {
 		display: block;
 		font-size: 56pt;
