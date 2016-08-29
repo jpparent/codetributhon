@@ -87,6 +87,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', 'NAME': 'codetributhon',
         'NAME': os.path.join(BASE_DIR, 'db.codetributhon'),
+
+	# 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'db.codetributhon',
+        # 'USER': 'root',
+        # 'PASSWORD': 'ml2_codetributhon',
+	# 'HOST': '',
     }
 }
 
