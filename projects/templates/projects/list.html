@@ -52,13 +52,7 @@
                                                 {{project.organization.name|truncatechars:17}}
                                             </a>
                                         </h4>
-                                        <h5>Contributions: <code>{{ project.nb_contrib }}</code></h5>
-                                        <hr>
-                                        <p>
-                                            {% autoescape off %}
-                                                {{ project.description|truncatechars:200 }}
-                                            {% endautoescape %}
-                                        </p>
+                                        <h5>Contributions: <code>{{ project.nb_contrib }}</code></h5> 
                                     </div>
                                 </div>
                             </div>
