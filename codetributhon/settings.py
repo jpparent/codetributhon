@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ml2k-pm-mmz%i+^__ax6&-vn_eex+(j5q@pjy!ij*i8f&xb)7@khm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['http://104.196.16.145/']
 
@@ -87,6 +87,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', 'NAME': 'codetributhon',
         'NAME': os.path.join(BASE_DIR, 'db.codetributhon'),
+
+	# 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'db.codetributhon',
+        # 'USER': 'root',
+        # 'PASSWORD': 'ml2_codetributhon',
+	# 'HOST': '',
     }
 }
 
