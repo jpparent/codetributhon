@@ -1,0 +1,30 @@
+h1, h2, h4, h5{ margin-bottom: 10px !important;}
+
+.thumbnail {
+    position: relative;
+    padding: 0px;
+    margin-bottom: 0 !important;
+
+    h5{margin-bottom: 0 !important;}
+    .body{
+        min-height: 250px;
+    }
+
+    table{
+        width: 100%;
+    }
+}
+
+.prj-img {width: 100%;}
+
+#group-btn-contrib{
+    padding: 20px;
+}
+
+.row p{
+    padding: 0 10px !important;
+    text-align: justify;
+}
+
+
+
