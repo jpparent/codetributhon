@@ -1,0 +1,52 @@
+h1, h2, h4, h5 {
+  margin-bottom: 10px !important; 
+}
+
+.thumbnail {
+  position: relative;
+  padding: 0px;
+  margin-bottom: 0 !important; }
+  .thumbnail h5 {
+    margin-bottom: 0 !important; }
+  .thumbnail .body {
+    min-height: 250px; }
+  .thumbnail table {
+    width: 100%; }
+
+.prj-img {
+  width: 100%; }
+
+
+.row p {
+  padding: 0 10px !important;
+  text-align: justify; }
+
+/*li:before {
+    content: "\e080";
+    font-family: 'Glyphicons Halfings';
+    font-size: 9px;
+    position: relative;
+    margin-right: 10px;
+    top: 3px;
+
+}*/
+
+.contribution-prix img{
+  width: 15%;
+  height: auto;
+
+}
+
+ul.no_bullet{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-size: 18px;
+  text-align: center;
+}
+
+p { font-size: 18px;}
+/*# sourceMappingURL=project.css.map */

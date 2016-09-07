@@ -35,6 +35,8 @@ class Calendar(generic.TemplateView):
 class Settlement(generic.TemplateView):
     template_name = 'pages/settlement.html'
 
+class Reward(generic.TemplateView):
+    template_name = 'pages/reward.html'
 
 class LogoutView(generic.RedirectView):
 

@@ -1,0 +1,84 @@
+{% extends "landing_base.html" %}
+<!-- Load internationalisation utils-->
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}{{ block.super }} Récompenses{% endblock %}
+
+{% block pagedesc %}{{ block.super }}Page des récompenses{% endblock %}
+
+{% block pagekey %}{{ block.super }}, reward, rewards, récompense, récompenses{% endblock %}
+
+{% block extrahead %}
+    <link href="{% static 'css/reward.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+    <div class="container" id="container">
+	<div class="body-general">
+	    <!-- <div class="row" id="badges">-->
+	    <div class="row">
+		<div class="page-header">
+		    </br>
+		    <h1>Badges</h1>
+		</div>
+		<div class="contribution-prix">
+		    <ul class="no_bullet">
+			<li>
+			    <img src="{% static 'img/icons/GreenContributionLogo.png' %}" alt="1ere contribution"/>
+			    1ere contribution
+			</li>
+			<li>
+			    <img src="{% static 'img/icons/YellowContributionLogo.png' %}" alt="5e contribution"/>
+			    5e contribution
+			</li>
+			<li>
+			    <img src="{% static 'img/icons/PinkContributionLogo.png' %}" alt="10e contribution"/>
+			    10e contribution
+			</li>
+			<li>
+			    <img src="{% static 'img/icons/BlueContributionLogo.png' %}" alt="15e contribution"/>
+			    15e contribution
+			</li>
+			<li>
+			    <img src="{% static 'img/icons/BlackContributionLogo.png' %}" alt="20e contribution"/>
+			    20e contribution
+			</li>
+		    </ul>
+		</div>
+	    </div>
+	    <div class="row" id="trousse-surprise">
+		<div class="page-header">
+		    <h1>Trousse-Surprise</h1>
+		</div>
+		<div class="col-md-12 text-center">
+		    <p>Rémise à tous les étudiant.e.s qui viennent aux ateliers avec les mentors industriels.</p>
+		    <p>Surprise!!!</p>
+		</div>
+	    </div>
+	    <div class="row" id="trousse-surprise">
+		<div class="page-header">
+		    <h1>Meilleur.e.s contributeurs/contributrices!!</h1>
+		</div>
+		<div class="col-md-12 text-center">
+		    <p>Prix remis pour les étudiant.e.s qui atteignent un nombre precis de "commit intégré upstream".</p>
+		    <p>Liste à venir!!!</p>
+		</div>
+	    </div>
+
+
+	</div>
+    </div>
+
+    <!--start: Wrapper-->
+    <div id="wrapper">
+
+
+    </div>
+    <!-- end: Wrapper  -->
+
+
+
+
+{% endblock %}

@@ -32,6 +32,12 @@ urlpatterns = patterns(
         views.Calendar.as_view(),
         name='calendar'
     ),
+    
+    url(
+        r'^reward/$',
+        views.Reward.as_view(),
+        name='reward'
+    ),
 
     url(
         r'^settlement/$',
