@@ -21,16 +21,6 @@ h1, h2, h4, h5 {
   padding: 0 10px !important;
   text-align: justify; }
 
-/*li:before {
-    content: "\e080";
-    font-family: 'Glyphicons Halfings';
-    font-size: 9px;
-    position: relative;
-    margin-right: 10px;
-    top: 3px;
-
-}*/
-
 .contribution-prix img{
   width: 15%;
   height: auto;
@@ -43,10 +33,11 @@ ul.no_bullet{
   margin: 0;
 }
 
-li {
-  font-size: 18px;
+li.bullet_logo{
+  font-size: 20px;
   text-align: center;
+  margin: 10px;
 }
 
-p { font-size: 18px;}
+p { font-size: 20px;}
 /*# sourceMappingURL=project.css.map */
