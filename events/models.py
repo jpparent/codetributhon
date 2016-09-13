@@ -61,6 +61,15 @@ class Events(Timestampable, models.Model):
         blank=False,
         null=False,
     )
+    
+    thanking_picture = models.ImageField(
+        upload_to="avatars_events",
+        verbose_name='Thanking picture',
+        blank=True,
+    )
+    thanking_text = models.TextField(
+        verbose_name='Texte de remerciment des partenaires.'
+    )
 
     def __str__(self):
         return self.title
