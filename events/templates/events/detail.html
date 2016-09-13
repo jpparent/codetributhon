@@ -14,6 +14,10 @@
         .body-general{ background-color: rgba(255, 255, 255, 0.95); padding: 0 30px; }*/
     .btn-url{
         color: black;}
+    .vertical_section{
+	margin-top:50px;
+	float:left;
+	width:50%;}
     </style>
 {% endblock %}
 {% block extrajs %}
@@ -30,28 +34,33 @@
 {% block content %}
     <div class="container">
         <div class="body-general">
-            <div class="row">
-                <div class="page-header">
 
-                        <img src="/media/{{ MEDIA_URL }}{{ events.logo }}" alt="{{events.title}}" class="img-responsive prj-img" width="30%">
+              <div class="row">
+		<div class="vertical_section">
+                  <img src="/media/{{ MEDIA_URL }}{{ events.logo }}" alt="{{events.title}}" class="img-responsive prj-img" width="30%">
+                  <h1>
+                    {{events.title}}<br>
+                    <small>{{ events.subTitle }}</small>
+                  </h1>
+                  <h5>{{ events.dateEvent|date:"d M Y" }}  a {{ events.time }}</h5>
 
-                        <h1>
-                            {{events.title}}<br>
-                            <small>{{ events.subTitle }}</small>
-                        </h1>
-                        <h5>{{ events.dateEvent|date:"d M Y" }}  a {{ events.time }}</h5>
+		</div>
+		<div class="vertical_section">
+		  <img src="/media/{{ MEDIA_URL }}{{ events.thanking_picture }}"  class="img-responsive prj-img" width="30%">
+                  <h1> {{events.thanking_text}} </h1>
+		  <p> Merci à nos commenditaires pour cette événements.
+		</div>
+	      </div>
 
-                </div>
-            </div>
 
-            <div class="row">
-                <p>
-                    <b>Location:</b> {{ events.location }}
-                </p>
-                {% autoescape off %}
-                    {{content_html}}
-                {% endautoescape %}
-                <div>
+              <div class="row">
+                  <p>
+                      <b>Location:</b> {{ events.location }}
+                  </p>
+                  {% autoescape off %}
+                      {{content_html}}
+                  {% endautoescape %}
+                  <div>
 
                     <ul class="list-inline">
                         <li>
@@ -71,8 +80,10 @@
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                         </li>
                     </ul>
-                </div>
-            </div>
+                  </div>
+	      </div>
+      
+
         </div>
     </div>
 
