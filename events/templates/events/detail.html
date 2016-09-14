@@ -37,7 +37,7 @@
 
               <div class="row">
 		<div class="vertical_section">
-                  <img src="/media/{{ MEDIA_URL }}{{ events.logo }}" alt="{{events.title}}" class="img-responsive prj-img" width="30%">
+                  <img src="/media/{{ MEDIA_URL }}{{ events.presenter_picture }}" alt="{{events.title}}" class="img-responsive prj-img" width="70%">
                   <h1>
                     {{events.title}}<br>
                     <small>{{ events.subTitle }}</small>
@@ -46,9 +46,12 @@
 
 		</div>
 		<div class="vertical_section">
-		  <img src="/media/{{ MEDIA_URL }}{{ events.thanking_picture }}"  class="img-responsive prj-img" width="30%">
-                  <h1> {{events.thanking_text}} </h1>
-		  <p> Merci à nos commenditaires pour cette événements.
+		  <center>
+		    <img src="/media/{{ MEDIA_URL }}{{ events.first_right_picture }}"  class="img-responsive prj-img" width=200px>
+		    </br>
+		    <img src="/media/{{ MEDIA_URL }}{{ events.second_right_picture }}"  class="img-responsive prj-img" width=200px>
+		    </br>
+                    <h4> {{events.thanking_text}} </h4></center>
 		</div>
 	      </div>
 
