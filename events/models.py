@@ -49,10 +49,10 @@ class Events(Timestampable, models.Model):
         null=False
     )
 
-    logo = models.ImageField(
+    presenter_picture = models.ImageField(
         upload_to="avatars_events",
-        verbose_name='Logo',
-        blank=True,
+        verbose_name='Presenter picture',
+        blank=False,
     )
 
     url = models.URLField(
@@ -62,9 +62,14 @@ class Events(Timestampable, models.Model):
         null=False,
     )
     
-    thanking_picture = models.ImageField(
+    first_right_picture = models.ImageField(
         upload_to="avatars_events",
-        verbose_name='Thanking picture',
+        verbose_name='First right picture',
+        blank=True,
+    )
+    second_right_picture = models.ImageField(
+        upload_to="avatars_events",
+        verbose_name='Second right picture',
         blank=True,
     )
     thanking_text = models.TextField(
