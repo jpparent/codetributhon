@@ -103,6 +103,7 @@
 	}
 	.facebook a,
 	.twitter a,
+	.linkedin a,
 	.google-plus a {
 		display: block;
 		width: 100%;
@@ -121,6 +122,10 @@
 	.twitter:hover a {
 		color: rgb(255, 255, 255) !important;
 		background-color: rgb(79, 213, 248) !important;
+	}
+	.linkedin:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(1, 119, 181) !important;
 	}
 	.google-plus:hover a {
 		color: rgb(255, 255, 255) !important;
@@ -187,6 +192,6 @@
 		.event-list > li > .social > ul > li > a {
 			display: block;
 			width: 40px;
-			padding: 10px 0px 9px;
+			padding: 7px 0px;
 		}
 	}

@@ -10,10 +10,9 @@
 
 {% block extrahead %}
     <style>
-        /*.body{ background: url("/media/{{ MEDIA_URL }}{{ events.logo }}") no-repeat center top; background-size: 100% 100% }
-        .body-general{ background-color: rgba(255, 255, 255, 0.95); padding: 0 30px; }*/
-    .btn-url{
-        color: black;}
+    .btn{
+	color:white;
+    }
     .vertical_section{
 	margin-top:50px;
 	float:left;
@@ -29,6 +28,7 @@
   js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.7";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+    <script type="text/javascript" src="{% static 'js/events.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -66,22 +66,30 @@
                   <div>
 
                     <ul class="list-inline">
-                        <li>
-                            <a href="{{ events.url }}" class="btn btn-warning btn-sm btn-url">
-                                <span class="fa fa-globe"></span> Inscris-toi
-                            </a>
-                        </li>
-                        <li>
-                            <div class="fb-share-button" data-href="{% url 'events:event_detail' events.id %}" data-layout="button_count" data-size="large" data-mobile-iframe="true">
-                                <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={% url 'events:event_detail' events.id %}&amp;src=sdkpreparse">Partager</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{% url 'events:event_detail' events.id %}" data-via="codetributhon" data-size="large">
-                                Tweet
-                            </a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                        </li>
+		      <li>
+                            <button href="{{ events.url }}" class="btn btn-md btn-url" style="background-color:#EFAD4F">
+                                <span class="fa fa-globe"></span>
+				 Inscris-toi
+                            </button>
+		      </li>
+		      <li>
+			<button class="btn btn-md share_fb" data-url="{{events.url}}{% url 'events:event_detail' events.id %}" style="background-color:#4C67A1">
+			  <i class="fa fa-facebook" aria-hideen="true"></i>
+			  Partager
+			</button>
+		      </li>
+		      <li>
+			<button class="btn btn-md share_tw" data-url="{{events.url}}{% url 'events:event_detail' events.id %}"  style="background-color:#55ACEE">
+			  <i class="fa fa-twitter" aria-hideen="true"></i>
+			  Partager
+			</button>
+		      </li>
+		      <li>
+			<button class="btn btn-md share_lkdin" data-url="{{events.url}}{% url 'events:event_detail' events.id %}" style="background-color:#0177B5">
+			  <i class="fa fa-linkedin" aria-hideen="true"></i>
+			  Partager
+			</button>
+		       </li>
                     </ul>
                   </div>
 	      </div>
