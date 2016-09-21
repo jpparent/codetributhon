@@ -25,7 +25,6 @@ urlpatterns = [
     url(r'^', include('pages.urls', namespace="pages")),
     url(r'^members/', include('members.urls', namespace="members")),
     url(r'^projects/', include('projects.urls', namespace="projects")),
-    url(r'^faq/', include('faq.urls', namespace="faq")),
     url(r'^events/', include('events.urls', namespace="events")),
 ]
 
