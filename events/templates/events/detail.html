@@ -67,10 +67,10 @@
 
                     <ul class="list-inline">
 		      <li>
-                            <button href="{{ events.url }}" class="btn btn-md btn-url" style="background-color:#EFAD4F">
+                            <a href="{{ events.url }}" class="btn btn-md btn-url" style="background-color:#EFAD4F">
                                 <span class="fa fa-globe"></span>
 				 Inscris-toi
-                            </button>
+                            </a>
 		      </li>
 		      <li>
 			<button class="btn btn-md share_fb" data-url="{{events.url}}{% url 'events:event_detail' events.id %}" style="background-color:#4C67A1">
