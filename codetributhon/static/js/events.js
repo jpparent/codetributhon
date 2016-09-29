@@ -5,12 +5,14 @@
 $(function(){
 
    var url = "";
+   var codetriUrl = "http://codetributhon.com";
 
    //partager sur facebook
     $('.share_fb').on('click', function (e){
         e.preventDefault();
 
-        url=$(this).data('url');
+//        url=$(this).data('url');
+        url=codetriUrl + $(this).data('url')
         var share_url = "https://www.facebook.com/sharer/sharer.php?u="+ encodeURIComponent(url) +"&amp;src=sdkprepars";
 
         sharePopupCenter(share_url, "Partagez sur Facebook1");
@@ -20,7 +22,7 @@ $(function(){
     $('.share_tw').on('click', function (e) {
         e.preventDefault();
 
-        url=$(this).data('url')
+        url=codetriUrl + $(this).data('url')
         var share_url = "https://twitter.com/intent/tweet?&url="+ encodeURIComponent(url) +"&via=codetributhon2016"
 
         sharePopupCenter(share_url, "Partagez sur twitter");
@@ -30,7 +32,8 @@ $(function(){
     $('.share_lkdin').on('click', function (e) {
         e.preventDefault();
 
-        url=$(this).data('url')
+//        url=$(this).data('url')
+        url=codetriUrl + $(this).data('url')
         var share_url = "https://www.linkedin.com/shareArticle?url="+ encodeURIComponent(url)
 
         sharePopupCenter(share_url, "Partagez sur linkedin");
