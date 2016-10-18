@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'pages',
     'members',
     'projects',
+    'faq',
     'events',
 ]
 

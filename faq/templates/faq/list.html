@@ -1,0 +1,70 @@
+{% extends "landing_base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block extrahead %}
+    <style>
+        h3{
+            padding: 20px 0;
+        }
+    </style>
+{% endblock %}
+
+{% block pagedesc %}
+    Foire aux questions de C0deTribuThon
+{% endblock %}
+{% block pagekey %}
+    {{ block.super }}
+{% endblock %}
+
+{% block extrajs %}
+    <script defer="defer" src="{% static 'js/faq.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="body-general">
+            <div class="row">
+                <div class="page-header">
+                    <h1>FAQ</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    {% if categories.count %}
+                        {% for category in categories %}
+                            <div class="row">
+                                <h3>{{ category.label }}</h3>
+                            </div>
+                        {% for faq in category.list_faq %}
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading{{ faq.id }}">
+                                    <a class="panel-title" data-toggle="collapse" data-parent="#accordion"
+                                       href="#collapse{{ faq.id }}" aria-expanded="true" aria-controls="collapse{{ faq.id }}">
+                                        {{faq.question}}
+                                    </a>
+                                </div>
+                                <div id="collapse{{ faq.id }}" class="panel-collapse collapse in" role="tabpanel"
+                                     aria-labelledby="heading{{ faq.id }}">
+                                    <div class="panel-body">
+                                         <p>{{faq.response}} </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        {% endfor %}
+                        {% endfor %}
+                    {% else %}
+                        <div class="alert alert-warning">
+                            Aucunes questions
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
