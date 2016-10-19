@@ -46,36 +46,34 @@
                     <div class="box-text">
                         <h2>1, 2, 3 GO!</h2>
                         <p>
-                            C’est enfin parti pour le codetributhon 2016! <br>Du 15 septembre au 2 décembre 2016 participez à nos
-                            activités! <br>Plusieurs prix à gagner.
+                            {% blocktrans %}C’est enfin parti pour le codetributhon 2016! <br>Du 15 septembre au 2 décembre 2016 participez à nos
+                            activités!<br>Plusieurs prix à gagner.{% endblocktrans %}
                         </p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="box-text">
-                        <h2>Un marathon de contributions!</h2>
+                        <h2>{% trans "Un marathon de contributions!" %}</h2>
                         <p>
-                            Le but est d’atteindre <span class="numb-contrib">{{ number_of_contribution }}</span> contributions dans 4 projets de logiciel libre.
+                            {% blocktrans %}Le but est d’atteindre <span class="numb-contrib">{{ number_of_contribution }}</span>
+				 contributions dans 4 projets de logiciel libre. {% endblocktrans %}
                         </p>
-                        <a href="{%  url 'projects:project_list' %}" class="btn btn-danger btn-lg">Projets</a>
+                        <a href="{%  url 'projects:project_list' %}" class="btn btn-danger btn-lg">{% trans "Projets" %}</a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="box-text">
-                        <h2>Joins-toi à nous!</h2>
+                        <h2>{% trans "Joins-toi à nous" %}</h2>
                         <p>
-                            Pour participer, rien de plus simple.<br> Inscris-toi aux ateliers, contribue et envoie URL de ton commit.<br>
-                            Les meilleurs contributeurs étudiants gagneront des prix.
+                            {% blocktrans %}Pour participer, rien de plus simple.<br> Inscris-toi aux ateliers, contribue et envoie URL de ton commit.<br>
+                            Les meilleurs contributeurs étudiants gagneront des prix.{% endblocktrans %}
                         </p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="box-text">
-                        <h2>Coup d’envoi chez Google Montréal!</h2>
-                        <p>
-                            Viens célébrer le grand départ du codetributhon 2016 le jeudi 15 septembre de 18 h à 20 h.
-                        </p>
-                        <a href="" class="btn btn-danger btn-lg"> Inscris-toi </a>
+                        <h2>{% trans "Plusieurs ateliers et conférences à venir !" %}</h2> </br>
+                        <a href="http://www.codetributhon.com/events/list/" class="btn btn-danger btn-lg">{% blocktrans %}Liste des évènements{% endblocktrans %}</a>
                     </div>
                 </div>
             </div>
@@ -106,7 +104,7 @@
 
             <section id="contributions">
                 <div class="row">
-                    <h1 class="text-center">Contributions cumulées</h1>
+                    <h1 class="text-center">{% trans "Contributions cumulées" %}</h1>
                     <br>
                     <div id="progress-bar" class="hidden-xs hidden-sm">
                         <div class="textProgress">
@@ -116,8 +114,7 @@
                         </div>
                     </div>
                     <div class="hidden-md hidden-lg text-center ">
-                        <h4>Nous avons déjà <em class="text-danger nb-contribution"></em> contributions</h4>
-
+                        <h4>{% blocktrans %}Nous avons déjà <em class="text-danger nb-contribution"></em> contributions{% endblocktrans %}</h4>
                     </div>
                 </div>
 
@@ -125,11 +122,11 @@
                     <div class="text-center">
                         <a href="{% url 'projects:contribution_list'%}"  class="btn btn-danger btn-lg btn-access-contrib">
                             <i class="fa fa-list" aria-hidden="true"></i>
-                            Liste des contributions
+                            {% trans "Liste des contributions" %}
                         </a>
                         <a href="{% url 'projects:contribution_create' %}" class="btn btn-danger btn-lg btn-access-contrib">
                             <i class="fa fa-plus" aria-hidden="true"></i>
-                            Envoyez votre contribution
+                            {% trans "Envoyez votre contribution" %}
                         </a>
                     </div>
                 </div>
@@ -143,14 +140,15 @@
 
             <!-- start: Row -->
             <div class="row">
-                     <h1 class="text-center">C'est quoi le codetributhon?</h1>
+
+                <h1 class="text-center">{% trans "C'est quoi le codetributhon?" %}</h1>
                 <br>
                 <div class="col-md-4">
                     <div class="icons-box">
                         <img src="{% static 'img/img_desc/marathon.png' %}" alt="marathon" width="50%">
-                        <div class="title"><h3>Un marathon</h3></div>
+                        <div class="title"><h3>{% trans "Le marathon" %}</h3></div>
                         <p>
-                            Un marathon de contributions étudiantes. Objectif 100 contributions dans 4 projets en logiciel libre.
+                            {% trans "Un marathon de contributions étudiantes. Objectif 100 contributions dans 4 projets en logiciel libre." %}
                         </p>
                         <div class="clear"></div>
                     </div>
@@ -159,9 +157,9 @@
                 <div class="col-md-4">
                     <div class="icons-box">
                         <img src="{% static 'img/img_desc/activities.png' %}" alt="activites" width="50%">
-                        <div class="title"><h3>Des activités</h3></div>
+                        <div class="title"><h3>{% trans "Des activités" %}</h3></div>
                         <p>
-                            Une foule d’activités: ateliers, conférences, 5à7, projection vidéo et bien plus!
+                            {% trans "Une foule d’activités: ateliers, conférences, 5à7, projection vidéo et bien plus!" %}
                         </p>
                         <div class="clear"></div>
                     </div>
@@ -170,9 +168,9 @@
                 <div class="col-md-4">
                     <div class="icons-box">
                         <img src="{% static 'img/img_desc/community.png' %}" alt="communaute" width="50%">
-                        <div class="title"><h3>La communauté</h3></div>
+                        <div class="title"><h3>{% trans "La communauté" %}</h3></div>
                         <p>
-                            Débutants comme experts sont les bienvenus pour participer, s’entraider, contribuer et faire grandir la communauté du libre!
+                            {% trans "Débutants comme experts sont les bienvenus pour participer, s’entraider, contribuer et faire grandir la communauté du libre!" %}
                         </p>
                         <div class="clear"></div>
                     </div>
@@ -185,7 +183,7 @@
 
             <!-- start: Row -->
             <div class="row" id="bloc-partners">
-                <h1 class="text-center">Nos partenaires</h1>
+                <h1 class="text-center">{% trans "Nos partenaires" %}</h1>
                 <br><br>
                 <div class="col-md-12">
                     <div class="col-md-3">
@@ -193,7 +191,7 @@
                             <a href="https://abc.xyz/">
                                 <img src="{% static 'img/partners/google.png' %}" alt="google" class="img-responsive" >
                             </a>
-                            
+
                         </div>
                     </div>
 
@@ -229,20 +227,20 @@
             <br>
             <div class="row">
                 <div class="bg-danger text-center bloc-ml2">
-                    <p>Le codetributhon un évènement propulsé par
+                    <p>{% trans "Le codetributhon un évènement propulsé par" %}
                         <a href="https://maisonlogiciellibre.org/">
                             <img src= "{% static 'img/icons/ml2_logo.png' %}" alt="Maison du logiciel libre" width=40% >
                         </a>
                     </p>
                 </div>
                 <div class="bg-danger text-center bloc-ml2">
-                    <p>Activité dans le cadre de la semaine québécoise de l'informatique libre (SQIL) 2016
+                    <p>{% trans "Activité dans le cadre de la semaine québécoise de l'informatique libre (SQIL) 2016" %}
                         <a href="http://2016.sqil.info/activites/">
                             <img src= "{% static 'img/icons/sqil_logo.png' %}" alt="Semaine québécoise de l'informatique libre (SQIL)" width=30%>
                         </a>
                     </p>
                 </div>
-                
+
             </div>
 
         </div>

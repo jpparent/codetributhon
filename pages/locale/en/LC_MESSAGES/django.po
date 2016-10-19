@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-19 14:46+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: pages/templates/pages/contact.html:18
+msgid "À propos"
+msgstr "About"
+
+#: pages/templates/pages/home.html:49
+msgid ""
+"C’est enfin parti pour le codetributhon 2016! <br>Du 15 septembre au 2 "
+"décembre 2016 participez à nos\n"
+"                            activités!<br>Plusieurs prix à gagner."
+msgstr ""
+"It's finnaly start for the codetributhon 2016. <br> From september 15 to "
+"december 2 participate in our activities! <br> Many prices to win"
+
+#: pages/templates/pages/home.html:56
+msgid "Un marathon de contributions!"
+msgstr "A marathon of contributhions!"
+
+#: pages/templates/pages/home.html:58
+#, python-format
+msgid ""
+"Le but est d’atteindre <span class=\"numb-contrib\">"
+"%(number_of_contribution)s</span>\n"
+"\t\t\t\t contributions dans 4 projets de logiciel libre. "
+msgstr ""
+"The goal is to get <span class= \"num-contrib\">%(number_of_contribution)s</"
+"spans>\n"
+"contributions in 4 projects of free software."
+
+#: pages/templates/pages/home.html:61
+msgid "Projets"
+msgstr "Projects"
+
+#: pages/templates/pages/home.html:66
+msgid "Joins-toi à nous"
+msgstr "Come join us"
+
+#: pages/templates/pages/home.html:68
+msgid ""
+"Pour participer, rien de plus simple.<br> Inscris-toi aux ateliers, "
+"contribue et envoie URL de ton commit.<br>\n"
+"                            Les meilleurs contributeurs étudiants gagneront "
+"des prix."
+msgstr ""
+"To participate, nothing easier. <br> Register to workshop, contribute et "
+"send URL's commit. <br> \n"
+" Best students contributers will win prices."
+
+#: pages/templates/pages/home.html:75
+msgid "Plusieurs ateliers et conférences à venir !"
+msgstr "Many workshops and conferences coming your way!"
+
+#: pages/templates/pages/home.html:76
+msgid "Liste des évènements"
+msgstr "Workshop's list"
+
+#: pages/templates/pages/home.html:107
+msgid "Contributions cumulées"
+msgstr "Cumulated contributions"
+
+#: pages/templates/pages/home.html:117
+msgid ""
+"Nous avons déjà <em class=\"text-danger nb-contribution\"></em> contributions"
+msgstr ""
+"We already have <em class=\"text-danger nb-contribution\"></em> contributions"
+
+#: pages/templates/pages/home.html:125
+msgid "Liste des contributions"
+msgstr "Contributhion's list"
+
+#: pages/templates/pages/home.html:129
+msgid "Envoyez votre contribution"
+msgstr "Send your contribution"
+
+#: pages/templates/pages/home.html:144
+msgid "C'est quoi le codetributhon?"
+msgstr "What is codetributhon?"
+
+#: pages/templates/pages/home.html:149
+msgid "Le marathon"
+msgstr "The marathon"
+
+#: pages/templates/pages/home.html:151
+msgid ""
+"Un marathon de contributions étudiantes. Objectif 100 contributions dans 4 "
+"projets en logiciel libre."
+msgstr ""
+"A marathon of student's contributions. An objectif of 100 contibutions in 4 "
+"free software projects."
+
+#: pages/templates/pages/home.html:160
+msgid "Des activités"
+msgstr "Activities"
+
+#: pages/templates/pages/home.html:162
+msgid ""
+"Une foule d’activités: ateliers, conférences, 5à7, projection vidéo et bien "
+"plus!"
+msgstr ""
+"A lot of activities: workshops, conferences, 5to7, video and many mores!"
+
+#: pages/templates/pages/home.html:171
+msgid "La communauté"
+msgstr "The community"
+
+#: pages/templates/pages/home.html:173
+msgid ""
+"Débutants comme experts sont les bienvenus pour participer, s’entraider, "
+"contribuer et faire grandir la communauté du libre!"
+msgstr ""
+"Beginner and experts are welcome to participate, help each other, contribut "
+"and grouh the free software community!."
+
+#: pages/templates/pages/home.html:186
+msgid "Nos partenaires"
+msgstr "Ours partners"
+
+#: pages/templates/pages/home.html:230
+msgid "Le codetributhon un évènement propulsé par"
+msgstr "The codetributhon is an event made by"
+
+#: pages/templates/pages/home.html:237
+msgid ""
+"Activité dans le cadre de la semaine québécoise de l'informatique libre "
+"(SQIL) 2016"
+msgstr ""
+"Activity during the semaine québécoise de l'informatique libre (SQIL) 2016"
+
+#: pages/templates/pages/reward.html:28
+msgid "ième"
+msgstr "st"
+
+#: pages/templates/pages/reward.html:31
+msgid "ere"
+msgstr "th"
+
+#: pages/templates/pages/reward.html:54
+msgid "Trousse-surprise"
+msgstr "Surprise kit"
+
+#: pages/templates/pages/reward.html:57
+msgid ""
+"Rémise à tous les étudiants qui viennent aux ateliers avec les partenaires."
+msgstr "Give to all student that come to workshop with partners"
+
+#: pages/templates/pages/reward.html:58
+msgid "Surprise!!!"
+msgstr "Surprise!!!"
+
+#: pages/templates/pages/reward.html:63
+msgid "Meilleurs contributeurs!!"
+msgstr "Best contributers"
+
+#: pages/templates/pages/reward.html:66
+msgid ""
+"Prix remis pour les étudiants qui atteignent un nombre précis de 'commit "
+"intégré upstream'."
+msgstr "Prices give to best students that did enough accepted commit"
+
+#: pages/templates/pages/reward.html:67
+msgid "Liste à venir!!!"
+msgstr "The list will be there soon."

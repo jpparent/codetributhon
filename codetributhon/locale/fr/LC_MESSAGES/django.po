@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: codetributhon/settings.py:137
+msgid "Français"
+msgstr "Français"
+
+#: codetributhon/settings.py:138
+msgid "Anglais"
+msgstr "Anglais"
+
+#: codetributhon/templates/footer.html:15
+#: codetributhon/templates/header.html:50
+#: codetributhon/templates/header.html:56
+msgid "Accueil"
+msgstr "Accueil"
+
+#: codetributhon/templates/footer.html:16
+#: codetributhon/templates/header.html:51
+#: codetributhon/templates/header.html:57
+msgid "Évènements"
+msgstr "Évènements"
+
+#: codetributhon/templates/footer.html:17
+#: codetributhon/templates/header.html:52
+#: codetributhon/templates/header.html:58
+msgid "Projets"
+msgstr "Projets"
+
+#: codetributhon/templates/footer.html:18
+msgid "Contributions"
+msgstr "Contributions"
+
+#: codetributhon/templates/footer.html:19
+#: codetributhon/templates/header.html:53
+#: codetributhon/templates/header.html:59
+msgid "FAQ"
+msgstr "FAQ"
+
+#: codetributhon/templates/footer.html:20
+#: codetributhon/templates/header.html:61
+msgid "Règlement"
+msgstr "Règlement"
+
+#: codetributhon/templates/footer.html:36
+msgid "À propos"
+msgstr "À propos"
+
+#: codetributhon/templates/footer.html:39
+msgid ""
+"Le codetributhon est une initiative propulsé par la ML2. L’objectif de la "
+"ML2 est de\n"
+"                        perfectionner les compétences des étudiants du "
+"réseau universitaire québécois, dans divers\n"
+"                        langages informatiques, par la participation à des "
+"projets libres. Notre mission: Initier,\n"
+"                        Développer, Partager "
+msgstr ""
+"Le codetributhon est une initiative propulsé par la ML2. L’objectif de la "
+"ML2 est de\n"
+"                        perfectionner les compétences des étudiants du "
+"réseau universitaire québécois, dans divers\n"
+"                        langages informatiques, par la participation à des "
+"projets libres. Notre mission: Initier,\n"
+"                        Développer, Partager "
+
+#: codetributhon/templates/footer.html:48
+msgid "Suivez-nous!"
+msgstr "Suivez-nous!"
+
+#: codetributhon/templates/footer.html:96
+msgid "Contactez-nous"
+msgstr "Contactez-nous"
+
+#: codetributhon/templates/footer.html:99
+msgid "Telephone"
+msgstr "Telephone"
+
+#: codetributhon/templates/footer.html:103
+msgid "Adresse"
+msgstr "Adresse"
+
+#: codetributhon/templates/header.html:60
+msgid "Récompenses"
+msgstr "Récompenses"

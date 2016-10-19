@@ -25,10 +25,10 @@
                             {{project.name}}
                         </h1>
                         <h5>
-                            Un projet de :
+                            {% trans "Un projet de :" %}
                             <a href="{{ project.organization.url }}"><strong>{{project.organization}}</strong></a>
                         </h5>
-                        <h5>Contributions: <code>{{ project.nb_contrib }}</code></h5>
+                        <h5>{% trans "Contributions: " %}<code>{{ project.nb_contrib }}</code></h5>
                     </div>
 
                 </div>

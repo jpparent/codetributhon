@@ -17,18 +17,18 @@
         <div class="body-general">
             <div class="row">
                 <div class="page-header">
-                    <h1>Liste des projets</h1>
+                    <h1>{% trans "Liste des projets" %}</h1>
                 </div>
             </div>
             <div class="row" id="group-btn-contrib">
                 <div class="col-md-12 text-center">
                     <a href="{% url 'projects:contribution_list'%}"  class="btn btn-danger btn-lg btn-access-contrib">
                         <i class="fa fa-list" aria-hidden="true"></i>
-                        Liste des contributions
+                        {% trans "Liste des contributions" %}
                     </a>
                     <a href="{% url 'projects:contribution_create'%}" class="btn btn-danger btn-lg btn-access-contrib">
                         <i class="fa fa-plus" aria-hidden="true"></i>
-                        Envoyez votre contribution
+                        {% trans "Envoyez votre contribution" %}
                     </a>
 		            <a href="http://www.codetributhon.com/reward"  class="btn btn-danger btn-lg btn-access-reward">
 			            <i class="fa fa-gift" aria-hidden="true"></i>
@@ -63,12 +63,12 @@
                         {% endfor %}
                     {% else %}
                         <div class="alert alert-warning">
-                            Aucun de vos projets ne correspond à ce statut.
+                            {% trans "Aucun de vos projets ne correspond à ce statut." %}
                         </div>
                     {% endif %}
                 {% else %}
                     <div class="alert alert-warning">
-                        Vous n'avez aucun projet pour le moment.
+                        {% trans "Vous n'avez aucun projet pour le moment." %}
                     </div>
                 {% endif %}
             </div>

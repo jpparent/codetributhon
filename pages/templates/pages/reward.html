@@ -25,45 +25,46 @@
 		</div>
 		<div class="contribution-prix">
 		    <ul class="no_bullet">
-			<li class="bullet_logo">
-			    <img src="{% static 'img/icons/GreenContributionLogo.png' %}" alt="1ere contribution"/>
-			    1ere contribution
-			</li>
-			<li class="bullet_logo">
-			    <img src="{% static 'img/icons/YellowContributionLogo.png' %}" alt="5e contribution"/>
-			    5e contribution
-			</li>
-			<li class="bullet_logo">
-			    <img src="{% static 'img/icons/PinkContributionLogo.png' %}" alt="10e contribution"/>
-			    10e contribution
-			</li>
-			<li class="bullet_logo">
-			    <img src="{% static 'img/icons/BlueContributionLogo.png' %}" alt="15e contribution"/>
-			    15e contribution
-			</li>
-			<li class="bullet_logo">
-			    <img src="{% static 'img/icons/BlackContributionLogo.png' %}" alt="20e contribution"/>
-			    20e contribution
-			</li>
+                {% trans "ième" as  ième %}
+                <li class="bullet_logo">
+                    <img src="{% static 'img/icons/GreenContributionLogo.png' %}" alt="1ere contribution"/>
+                    1{% trans "ere" %} contribution
+                </li>
+                <li class="bullet_logo">
+                    <img src="{% static 'img/icons/YellowContributionLogo.png' %}" alt="5e contribution"/>
+                    5{{ ième }} contribution
+                </li>
+                <li class="bullet_logo">
+                    <img src="{% static 'img/icons/PinkContributionLogo.png' %}" alt="10e contribution"/>
+                    10{{ ième }}  contribution
+                </li>
+                <li class="bullet_logo">
+                    <img src="{% static 'img/icons/BlueContributionLogo.png' %}" alt="15e contribution"/>
+                    15{{ ième }}  contribution
+                </li>
+                <li class="bullet_logo">
+                    <img src="{% static 'img/icons/BlackContributionLogo.png' %}" alt="20e contribution"/>
+                    20{{ ième }}  contribution
+                </li>
 		    </ul>
 		</div>
 	    </div>
 	    <div class="row" id="trousse-surprise">
 		<div class="page-header">
-		    <h1>Trousse-surprise</h1>
+		    <h1>{% trans "Trousse-surprise" %}</h1>
 		</div>
 		<div class="col-md-12 text-center">
-		    <p>Rémise à tous les étudiants qui viennent aux ateliers avec les partenaires.</p>
-		    <p>Surprise!!!</p>
+		    <p>{% trans "Rémise à tous les étudiants qui viennent aux ateliers avec les partenaires." %}</p>
+		    <p>{% trans "Surprise!!!" %}</p>
 		</div>
 	    </div>
 	    <div class="row" id="trousse-surprise">
 		<div class="page-header">
-		    <h1>Meilleurs contributeurs!!</h1>
+		    <h1>{% trans "Meilleurs contributeurs!!" %}</h1>
 		</div>
 		<div class="col-md-12 text-center">
-		    <p>Prix remis pour les étudiants qui atteignent un nombre précis de "commit intégré upstream".</p>
-		    <p>Liste à venir!!!</p>
+		    <p>{% trans "Prix remis pour les étudiants qui atteignent un nombre précis de 'commit intégré upstream'." %}</p>
+		    <p>{% trans "Liste à venir!!!" %}</p>
 		</div>
 	    </div>
 

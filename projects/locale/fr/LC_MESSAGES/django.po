@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-19 15:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: projects/templates/contributions/create.html:29
+#, fuzzy
+#| msgid "Envoyez votre contribution"
+msgid "Envoyez vos Contributions"
+msgstr "Envoyez votre contribution"
+
+#: projects/templates/contributions/create.html:30
+#: projects/templates/contributions/list.html:54
+#: projects/templates/projects/list.html:27
+msgid "Liste des contributions"
+msgstr "Liste des contributions"
+
+#: projects/templates/contributions/create.html:43
+msgid "Envoyer"
+msgstr ""
+
+#: projects/templates/contributions/create.html:55
+#, fuzzy
+#| msgid "Liste des contributions"
+msgid "Reglement contribution"
+msgstr "Liste des contributions"
+
+#: projects/templates/contributions/create.html:56
+#, fuzzy
+#| msgid "Envoyez votre contribution"
+msgid "Conditions pour envoyer une contribution"
+msgstr "Envoyez votre contribution"
+
+#: projects/templates/contributions/create.html:63
+msgid ""
+" Pour être valide, une contribution doit:\n"
+"                        <ol>\n"
+"                            <li>Être faite par un(e) étudiant(e) inscrit(e) "
+"à temps plein ou partiel à une institution universitaire ou un CEGEP.</li>\n"
+"                            <li>Une contribution doit être faite dans le "
+"cadre des 4 projets libres de nos partenaires (Chromium, Libre Office, MGNT, "
+"Ring).</li>\n"
+"                            <li>Être datée entre le 15 septembre et le 2 "
+"décembre 2016.</li>\n"
+"                            <li>Être traçable, un URL doit être fourni lors "
+"de la soumission. La soumission dont se faire via le formulaire du site "
+"codetributhon.com</li>\n"
+"                            <li>La contribution doit être acceptée \"upstream"
+"\" par un de nos partenaires  (Chromium, Libre Office, MGNT, Ring).</li>"
+msgstr ""
+
+#: projects/templates/contributions/list.html:60
+#, fuzzy
+#| msgid "Envoyez votre contribution"
+msgid "Envoyer votre contribution"
+msgstr "Envoyez votre contribution"
+
+#: projects/templates/contributions/list.html:81
+msgid "Projet"
+msgstr ""
+
+#: projects/templates/contributions/list.html:82
+#, fuzzy
+#| msgid "Liste des contributions"
+msgid "Lieu de la contribution"
+msgstr "Liste des contributions"
+
+#: projects/templates/contributions/list.html:86
+msgid "Afficher la description"
+msgstr ""
+
+#: projects/templates/contributions/list.html:87
+msgid "Fermer la description"
+msgstr ""
+
+#: projects/templates/contributions/list.html:99
+#, fuzzy
+#| msgid "Envoyez votre contribution"
+msgid "Il n y a aucune contributions"
+msgstr "Envoyez votre contribution"
+
+#: projects/templates/projects/detail.html:28
+msgid "Un projet de :"
+msgstr ""
+
+#: projects/templates/projects/detail.html:31
+#, fuzzy
+#| msgid "Liste des contributions"
+msgid "Contributions: "
+msgstr "Liste des contributions"
+
+#: projects/templates/projects/list.html:20
+msgid "Liste des projets"
+msgstr "Liste des projets"
+
+#: projects/templates/projects/list.html:31
+msgid "Envoyez votre contribution"
+msgstr "Envoyez votre contribution"
+
+#: projects/templates/projects/list.html:66
+msgid "Aucun de vos projets ne correspond à ce statut."
+msgstr "Aucun de vos projets ne correspond à ce statut."
+
+#: projects/templates/projects/list.html:71
+msgid "Vous n'avez aucun projet pour le moment."
+msgstr "Vous n'avez aucun projet pour le moment."

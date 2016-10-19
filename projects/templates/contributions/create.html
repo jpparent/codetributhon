@@ -26,8 +26,8 @@
                     <div class="contrib-form">
                         <div class="form-top">
                             <div class="form-top-left">
-                                <h2>Envoyez vos Contributions</h2>
-                                <p><a href="{% url 'projects:contribution_list'%}">Liste des contributions</a></p>
+                                <h2>{% trans "Envoyez vos Contributions" %}</h2>
+                                <p><a href="{% url 'projects:contribution_list'%}">{% trans "Liste des contributions" %}</a></p>
                             </div>
                             <div class="form-top-right">
                                 <i class="fa fa-code"></i>
@@ -40,7 +40,7 @@
 
                                 {% buttons %}
                                     <button type="submit" class="btn btn-primary">
-                                        {% bootstrap_icon "star" %} Envoyer
+                                        {% bootstrap_icon "star" %} {% trans "Envoyer" %}
                                     </button>
                                 {% endbuttons %}
                             </form>
@@ -52,21 +52,21 @@
                     <div class="contrib-form">
                     <div class="form-top">
                         <div class="form-top-left">
-                            <h2>Reglement contribution</h2>
-                            <p>Conditions pour envoyer une contribution</p>
+                            <h2>{% trans "Reglement contribution" %}</h2>
+                            <p>{% trans "Conditions pour envoyer une contribution" %}</p>
                         </div>
                         <div class="form-top-right">
                             <i class="fa fa-pencil"></i>
                         </div>
                     </div>
                     <div class="form-bottom">
-                        Pour être valide, une contribution doit:
+                        {% blocktrans %} Pour être valide, une contribution doit:
                         <ol>
                             <li>Être faite par un(e) étudiant(e) inscrit(e) à temps plein ou partiel à une institution universitaire ou un CEGEP.</li>
                             <li>Une contribution doit être faite dans le cadre des 4 projets libres de nos partenaires (Chromium, Libre Office, MGNT, Ring).</li>
                             <li>Être datée entre le 15 septembre et le 2 décembre 2016.</li>
                             <li>Être traçable, un URL doit être fourni lors de la soumission. La soumission dont se faire via le formulaire du site codetributhon.com</li>
-                            <li>La contribution doit être acceptée "upstream" par un de nos partenaires  (Chromium, Libre Office, MGNT, Ring).  </li>
+                            <li>La contribution doit être acceptée "upstream" par un de nos partenaires  (Chromium, Libre Office, MGNT, Ring).</li>{% endblocktrans %}
                         </ol>
                     </div>
                 </div>

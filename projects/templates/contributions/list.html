@@ -51,13 +51,13 @@
         <div class="body-general">
             <div class="row">
                 <div class="page-header">
-                    <h1 id="timeline">Liste des contributions</h1>
+                    <h1 id="timeline">{% trans "Liste des contributions" %}</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="box-btn-contrib">
                     <div class="text-center">
-                        <a href="{% url 'projects:contribution_create'%}" class="btn btn-danger btn-lg btn-access-contrib">Envoyer votre contribution</a>
+                        <a href="{% url 'projects:contribution_create'%}" class="btn btn-danger btn-lg btn-access-contrib">{% trans "Envoyer votre contribution" %}</a>
                     </div>
                 </div>
 
@@ -78,13 +78,13 @@
                                         </div>
                                         <div class="timeline-body">
                                             <ul>
-                                                <li>Projet <a href="{% url 'projects:project_detail' contrib.project.id%}">{{ contrib.project.name }}</a></li>
-                                                <li><a href="{{ contrib.url }}">Lieu de la contribution</a></li>
+                                                <li>{% trans "Projet" %} <a href="{% url 'projects:project_detail' contrib.project.id%}">{{ contrib.project.name }}</a></li>
+                                                <li><a href="{{ contrib.url }}">{% trans "Lieu de la contribution" %}</a></li>
                                             </ul>
                                             <div class="bloc-desc">
                                                 <p>
-                                                    <a href="#" class="btn-show-desc">Afficher la description</a>
-                                                    <a href="#" class="btn-hide-desc hide">Fermer la description</a>
+                                                    <a href="#" class="btn-show-desc">{% trans "Afficher la description" %}</a>
+                                                    <a href="#" class="btn-hide-desc hide">{% trans "Fermer la description" %}</a>
                                                 </p>
 
                                                 <p class="description hide">{{ contrib.description }}</p>
@@ -96,7 +96,7 @@
 
                         {% else %}
                             <div class="alert alert-warning">
-                                Il n y a aucune contributions
+                                {% trans "Il n y a aucune contributions" %}
                             </div>
                         {% endif %}
                     </ul>

@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load i18n %}
 
     <div id="footer-menu" class="hidden-tablet hidden-phone">
         <div class="container hidden-xs hidden-sm">
@@ -11,12 +12,12 @@
                 <div class="col-md-11">
                     <div id="footer-menu-links">
                         <ul class="list-inline" id="footer-nav">
-                            <li><a href="{% url 'pages:home'%}">Accueil</a></li>
-                            <li><a href="{% url 'pages:calendar'%}">Évènements</a></li>
-                            <li><a href="{% url 'projects:project_list' %}">Projets</a></li>
-                            <li><a href="{% url 'projects:contribution_list'%}">Contributions</a></li>
-                   	    <li><a href="{% url 'faq:faq_list'%}">FAQ</a></li>
-                            <li><a href="{% url 'pages:settlement'%}">Règlement</a></li>
+                            <li><a href="{% url 'pages:home'%}">{% trans "Accueil" %}</a></li>
+                            <li><a href="{% url 'pages:calendar'%}">{% trans "Évènements" %}</a></li>
+                            <li><a href="{%  url 'projects:project_list' %}">{% trans "Projets" %}</a></li>
+                            <li><a href="{% url 'projects:contribution_list'%}">{% trans "Contributions" %}</a></li>
+                            <li><a href="{% url 'faq:faq_list'%}">{% trans "FAQ" %}</a></li>
+                            <li><a href="{% url 'pages:settlement'%}">{% trans "Règlement" %}</a></li>
 
                         </ul>
                     </div>
@@ -32,19 +33,19 @@
             <div class="row">
                 <div class="col-lg-4">
 
-                    <h3>À propos</h3>
+                    <h3>{% trans "À propos" %}</h3>
 
                     <p class="text-justify">
-                        Le codetributhon est une initiative propulsé par la ML2. L’objectif de la ML2 est de
+                        {% blocktrans %}Le codetributhon est une initiative propulsé par la ML2. L’objectif de la ML2 est de
                         perfectionner les compétences des étudiants du réseau universitaire québécois, dans divers
                         langages informatiques, par la participation à des projets libres. Notre mission: Initier,
-                        Développer, Partager
+                        Développer, Partager {% endblocktrans %}
                     </p>
 
                 </div>
 
                 <div class="col-lg-4">
-                    <h3>Suivez-nous!</h3>
+                    <h3>{% trans "Suivez-nous!" %}</h3>
                     <ul class="social-grid">
                         <li>
                             <div class="social-item">
@@ -92,14 +93,14 @@
 
                 </div>
                 <div class="col-lg-4">
-                    <h3>Contactez-nous</h3>
+                    <h3>{% trans "Contactez-nous" %}</h3>
 
                     <dl>
-                        <dt>Telephone</dt>
+                        <dt>{% trans "Telephone" %}</dt>
                         <dd>514-396-8799</dd>
                         <dt>Email</dt>
                         <dd>maisonlogiciellibre@etsmtl.net</dd>
-                        <dt>Adresse</dt>
+                        <dt>{% trans "Adresse" %}</dt>
                         <dd>1100 rue Notre Dame Ouest ÉTS pavillon A-0130</dd>
                     </dl>
             </div>
