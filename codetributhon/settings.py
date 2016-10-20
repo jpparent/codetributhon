@@ -134,7 +134,7 @@ gettext = lambda x: x
 
 # List of supported languages
 LANGUAGES = (
-   ('fr', gettext('Français')),
+   ('fr', gettext('Francais')),
    ('en', gettext('Anglais')),
 )
 
