@@ -6,6 +6,8 @@ from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
 from datetime import date
 import markdown
+from lxml import etree
+from django.conf import settings
 
 class EventsList(generic.ListView):
     # List all event
@@ -37,7 +39,11 @@ class EventDetail(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super(EventDetail, self).get_context_data(**kwargs)
 
+        tree = etree.parse(open(settings.STATIC_ROOT+"/API_KEYS.xml"))
+
+        key_google_map = tree.xpath("/apis/api/key")[0]
         md = markdown.Markdown()
         context['content_html'] = md.convert(self.object.description)
+        context['key_google_map'] = key_google_map.text
 
         return context

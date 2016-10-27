@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<apis>
+
+    <api data-id="api_1">
+        <service>Google map</service>
+        <key>AIzaSyDucDMTZnvQcDGCXhv2UR8sSH5Z3Mc_SOo</key>
+    </api>
+
+</apis>

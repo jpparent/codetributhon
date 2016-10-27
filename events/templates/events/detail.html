@@ -18,23 +18,23 @@
         }
         #map { height: 250px; }
         #localistion{ margin-bottom: 30px;}
-
     </style>
 {% endblock %}
 
 {% block extrajs %}
     <div id="fb-root"></div>
+
+    <script type="text/javascript" src="{% static 'js/events.js' %}"></script>
+
     <script  type="text/javascript">
         (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.7";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.7";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
     </script>
-    <script type="text/javascript" src="{% static 'js/events.js' %}"></script>
 
 
 {% endblock %}
@@ -57,6 +57,7 @@
 
             <div class="row">
                 <div class="col-md-8">
+
                     <div class="row" id="localistion">
                         <h2>{% trans "Localisation" %}</h2>
                         <div id="map"></div>
@@ -69,11 +70,6 @@
                                     center: myLatLng,
                                     zoom: 15
                                 });
-                                /*var marker = new google.maps.Marker({
-                                                                  map: map,
-                                                                  position: myLatLng,
-                                                                  title: 'ICI'
-                                                                });*/
 
                                 var geocoder = new google.maps.Geocoder();
 
@@ -98,7 +94,7 @@
                             }
 
                         </script>
-                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBINIrX4Gc3kzXG1c-5tlyXUDheM7qBUjc&callback=initMap"></script>
+                        <script async defer src='https://maps.googleapis.com/maps/api/js?key={{ key_google_map }}&callback=initMap' > </script>
                         <span id="address" class="hide">{{ events.location }}</span>
                     </div>
 
