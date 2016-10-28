@@ -1,8 +1,7 @@
 from django.conf.urls import patterns, url
 from events import views
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(
         r'^list/$',
         views.EventsList.as_view(),
@@ -13,4 +12,4 @@ urlpatterns = patterns(
         views.EventDetail.as_view(),
         name='event_detail'
     ),
-)
+]

@@ -1,8 +1,9 @@
 from django.conf.urls import url, patterns
 from pages import views
+import django.contrib.auth.views
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
+
     url(
         r'^$',
         views.Home.as_view(),
@@ -11,7 +12,7 @@ urlpatterns = patterns(
 
     url(
         r'^login/$',
-        'django.contrib.auth.views.login',
+        django.contrib.auth.views.login,
         name='login'
     ),
 
@@ -32,7 +33,7 @@ urlpatterns = patterns(
         views.Calendar.as_view(),
         name='calendar'
     ),
-    
+
     url(
         r'^reward/$',
         views.Reward.as_view(),
@@ -44,4 +45,4 @@ urlpatterns = patterns(
         views.Settlement.as_view(),
         name='settlement'
     ),
-)
+]

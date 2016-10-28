@@ -1,8 +1,7 @@
 from django.conf.urls import patterns, url
 from projects import views
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(
         r'^list/$',
         views.ProjectList.as_view(),
@@ -22,4 +21,4 @@ urlpatterns = patterns(
         views.ContributionCreate.as_view(),
         name='contribution_create'
     ),
-)
+]
