@@ -3,6 +3,7 @@
 ## requis
  - python >=3.5
  - pip >= 8.1
+ - gettext >= 0.15
  
 ## Description 
 Le codetributhon est une initiative propulsé par la ML2. L’objectif de 
