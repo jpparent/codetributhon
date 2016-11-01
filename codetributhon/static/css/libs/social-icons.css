@@ -485,8 +485,8 @@
 
 .social-info{
 	position: absolute;
-	width: 70px;
-	height: 70px;	
+	width: 72px;
+	height: 72px;	
 	-webkit-border-radius: 50em;
 	-moz-border-radius: 50em;
 	border-radius: 50em;
@@ -525,7 +525,6 @@
 	-o-transform: rotate3d(0,1,0,180deg);
 	-ms-transform: rotate3d(0,1,0,180deg);
 	transform: rotate3d(0,1,0,180deg);
-	margin-left: -2px;
 }
 
 .social-item:hover .social-info-wrap {
